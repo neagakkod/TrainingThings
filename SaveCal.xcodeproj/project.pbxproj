@@ -1,0 +1,502 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CE2AD9071636092500E05222 /* SavingsProfileData.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2AD9061636092500E05222 /* SavingsProfileData.m */; };
+		CE2AD90B1636094900E05222 /* SavingsProfile.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2AD90A1636094900E05222 /* SavingsProfile.m */; };
+		CE2AD90F1636518500E05222 /* ViewAllSavingsProfilesController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2AD90E1636518500E05222 /* ViewAllSavingsProfilesController.m */; };
+		CE2AD9121636525D00E05222 /* SavingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2AD9111636525C00E05222 /* SavingsViewController.m */; };
+		CE2AD91516365C6000E05222 /* SavingsAdvancedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2AD91416365C6000E05222 /* SavingsAdvancedViewController.m */; };
+		CEA30D29163ECA200008D6EB /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = CEA30D28163ECA200008D6EB /* Settings.bundle */; };
+		CEA30D2D163F40430008D6EB /* loans.png in Resources */ = {isa = PBXBuildFile; fileRef = CEA30D2B163F40430008D6EB /* loans.png */; };
+		CEA30D2E163F40430008D6EB /* savings.png in Resources */ = {isa = PBXBuildFile; fileRef = CEA30D2C163F40430008D6EB /* savings.png */; };
+		CEBA35FE16333EC400BA8645 /* UniformCashFlowView.m in Sources */ = {isa = PBXBuildFile; fileRef = CEBA35FD16333EC400BA8645 /* UniformCashFlowView.m */; };
+		CEBA36011633553D00BA8645 /* LoanProfile.m in Sources */ = {isa = PBXBuildFile; fileRef = CEBA36001633553D00BA8645 /* LoanProfile.m */; };
+		CEBCBAE01639099A002EAECC /* LoanDisplayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEBCBADF1639099A002EAECC /* LoanDisplayViewController.m */; };
+		CEBCBAE316398B91002EAECC /* LoanAdvancedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEBCBAE216398B91002EAECC /* LoanAdvancedViewController.m */; };
+		CEBCBAF2163A04E1002EAECC /* CustomerData.m in Sources */ = {isa = PBXBuildFile; fileRef = CEBCBAF1163A04E1002EAECC /* CustomerData.m */; };
+		CEBCBAF8163A1CAD002EAECC /* AddressData.m in Sources */ = {isa = PBXBuildFile; fileRef = CEBCBAF7163A1CAD002EAECC /* AddressData.m */; };
+		CEBCBAFB163A2EDE002EAECC /* ViewAllCusotmerCotnroller.m in Sources */ = {isa = PBXBuildFile; fileRef = CEBCBAFA163A2EDD002EAECC /* ViewAllCusotmerCotnroller.m */; };
+		CEBCBB02163A34A6002EAECC /* CustomerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEBCBB01163A34A6002EAECC /* CustomerViewController.m */; };
+		CEDADB5316165C7E00042942 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEDADB5216165C7E00042942 /* UIKit.framework */; };
+		CEDADB5516165C7E00042942 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEDADB5416165C7E00042942 /* Foundation.framework */; };
+		CEDADB5716165C7E00042942 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEDADB5616165C7E00042942 /* CoreGraphics.framework */; };
+		CEDADB5D16165C7E00042942 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CEDADB5B16165C7E00042942 /* InfoPlist.strings */; };
+		CEDADB5F16165C7E00042942 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CEDADB5E16165C7E00042942 /* main.m */; };
+		CEDADB6316165C7E00042942 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CEDADB6216165C7E00042942 /* AppDelegate.m */; };
+		CEDADB6516165C7E00042942 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = CEDADB6416165C7E00042942 /* Default.png */; };
+		CEDADB6716165C7E00042942 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CEDADB6616165C7E00042942 /* Default@2x.png */; };
+		CEDADB6916165C7E00042942 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CEDADB6816165C7E00042942 /* Default-568h@2x.png */; };
+		CEDADB6C16165C7E00042942 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEDADB6A16165C7E00042942 /* MainStoryboard.storyboard */; };
+		CEDADB7E1619D76400042942 /* CashFlowAnalyzer.m in Sources */ = {isa = PBXBuildFile; fileRef = CEDADB7D1619D76400042942 /* CashFlowAnalyzer.m */; };
+		CEE570771634A8FD0096BE8C /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CEE570751634A8FD0096BE8C /* Model.xcdatamodeld */; };
+		CEE5707A1634A9150096BE8C /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEE570791634A9150096BE8C /* CoreData.framework */; };
+		CEE5707D1634ABDA0096BE8C /* LoanProfileData.m in Sources */ = {isa = PBXBuildFile; fileRef = CEE5707C1634ABDA0096BE8C /* LoanProfileData.m */; };
+		CEE57084163514A50096BE8C /* ViewAllLoanProfilesController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEE57083163514A50096BE8C /* ViewAllLoanProfilesController.m */; };
+		CEE571061635F2F70096BE8C /* MainMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEE571051635F2F60096BE8C /* MainMenuViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		CE2AD9051636092500E05222 /* SavingsProfileData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SavingsProfileData.h; sourceTree = "<group>"; };
+		CE2AD9061636092500E05222 /* SavingsProfileData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SavingsProfileData.m; sourceTree = "<group>"; };
+		CE2AD9091636094900E05222 /* SavingsProfile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SavingsProfile.h; sourceTree = "<group>"; };
+		CE2AD90A1636094900E05222 /* SavingsProfile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SavingsProfile.m; sourceTree = "<group>"; };
+		CE2AD90D1636518500E05222 /* ViewAllSavingsProfilesController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewAllSavingsProfilesController.h; sourceTree = "<group>"; };
+		CE2AD90E1636518500E05222 /* ViewAllSavingsProfilesController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewAllSavingsProfilesController.m; sourceTree = "<group>"; };
+		CE2AD9101636525C00E05222 /* SavingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SavingsViewController.h; sourceTree = "<group>"; };
+		CE2AD9111636525C00E05222 /* SavingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SavingsViewController.m; sourceTree = "<group>"; };
+		CE2AD91316365C6000E05222 /* SavingsAdvancedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SavingsAdvancedViewController.h; sourceTree = "<group>"; };
+		CE2AD91416365C6000E05222 /* SavingsAdvancedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SavingsAdvancedViewController.m; sourceTree = "<group>"; };
+		CEA30D28163ECA200008D6EB /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
+		CEA30D2B163F40430008D6EB /* loans.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = loans.png; sourceTree = "<group>"; };
+		CEA30D2C163F40430008D6EB /* savings.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = savings.png; sourceTree = "<group>"; };
+		CEBA35FC16333EC400BA8645 /* UniformCashFlowView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UniformCashFlowView.h; sourceTree = "<group>"; };
+		CEBA35FD16333EC400BA8645 /* UniformCashFlowView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UniformCashFlowView.m; sourceTree = "<group>"; };
+		CEBA35FF1633553D00BA8645 /* LoanProfile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoanProfile.h; sourceTree = "<group>"; };
+		CEBA36001633553D00BA8645 /* LoanProfile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoanProfile.m; sourceTree = "<group>"; };
+		CEBCBADE1639099A002EAECC /* LoanDisplayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoanDisplayViewController.h; sourceTree = "<group>"; };
+		CEBCBADF1639099A002EAECC /* LoanDisplayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoanDisplayViewController.m; sourceTree = "<group>"; };
+		CEBCBAE116398B91002EAECC /* LoanAdvancedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoanAdvancedViewController.h; sourceTree = "<group>"; };
+		CEBCBAE216398B91002EAECC /* LoanAdvancedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoanAdvancedViewController.m; sourceTree = "<group>"; };
+		CEBCBAF0163A04E1002EAECC /* CustomerData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomerData.h; sourceTree = "<group>"; };
+		CEBCBAF1163A04E1002EAECC /* CustomerData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomerData.m; sourceTree = "<group>"; };
+		CEBCBAF6163A1CAC002EAECC /* AddressData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddressData.h; sourceTree = "<group>"; };
+		CEBCBAF7163A1CAD002EAECC /* AddressData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddressData.m; sourceTree = "<group>"; };
+		CEBCBAF9163A2EDD002EAECC /* ViewAllCusotmerCotnroller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewAllCusotmerCotnroller.h; sourceTree = "<group>"; };
+		CEBCBAFA163A2EDD002EAECC /* ViewAllCusotmerCotnroller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewAllCusotmerCotnroller.m; sourceTree = "<group>"; };
+		CEBCBB00163A34A6002EAECC /* CustomerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomerViewController.h; sourceTree = "<group>"; };
+		CEBCBB01163A34A6002EAECC /* CustomerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomerViewController.m; sourceTree = "<group>"; };
+		CEDADB4E16165C7E00042942 /* SaveCal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SaveCal.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CEDADB5216165C7E00042942 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		CEDADB5416165C7E00042942 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		CEDADB5616165C7E00042942 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		CEDADB5A16165C7E00042942 /* SaveCal-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SaveCal-Info.plist"; sourceTree = "<group>"; };
+		CEDADB5C16165C7E00042942 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		CEDADB5E16165C7E00042942 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		CEDADB6016165C7E00042942 /* SaveCal-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SaveCal-Prefix.pch"; sourceTree = "<group>"; };
+		CEDADB6116165C7E00042942 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		CEDADB6216165C7E00042942 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		CEDADB6416165C7E00042942 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		CEDADB6616165C7E00042942 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		CEDADB6816165C7E00042942 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		CEDADB6B16165C7E00042942 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
+		CEDADB7C1619D76400042942 /* CashFlowAnalyzer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CashFlowAnalyzer.h; sourceTree = "<group>"; };
+		CEDADB7D1619D76400042942 /* CashFlowAnalyzer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CashFlowAnalyzer.m; sourceTree = "<group>"; };
+		CEE570761634A8FD0096BE8C /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		CEE570791634A9150096BE8C /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		CEE5707B1634ABDA0096BE8C /* LoanProfileData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoanProfileData.h; sourceTree = "<group>"; };
+		CEE5707C1634ABDA0096BE8C /* LoanProfileData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoanProfileData.m; sourceTree = "<group>"; };
+		CEE57082163514A50096BE8C /* ViewAllLoanProfilesController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewAllLoanProfilesController.h; sourceTree = "<group>"; };
+		CEE57083163514A50096BE8C /* ViewAllLoanProfilesController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewAllLoanProfilesController.m; sourceTree = "<group>"; };
+		CEE571041635F2F60096BE8C /* MainMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainMenuViewController.h; sourceTree = "<group>"; };
+		CEE571051635F2F60096BE8C /* MainMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainMenuViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CEDADB4B16165C7E00042942 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CEE5707A1634A9150096BE8C /* CoreData.framework in Frameworks */,
+				CEDADB5316165C7E00042942 /* UIKit.framework in Frameworks */,
+				CEDADB5516165C7E00042942 /* Foundation.framework in Frameworks */,
+				CEDADB5716165C7E00042942 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CE2AD90C1636513F00E05222 /* savings Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				CE2AD90D1636518500E05222 /* ViewAllSavingsProfilesController.h */,
+				CE2AD90E1636518500E05222 /* ViewAllSavingsProfilesController.m */,
+				CE2AD9101636525C00E05222 /* SavingsViewController.h */,
+				CE2AD9111636525C00E05222 /* SavingsViewController.m */,
+				CE2AD91316365C6000E05222 /* SavingsAdvancedViewController.h */,
+				CE2AD91416365C6000E05222 /* SavingsAdvancedViewController.m */,
+			);
+			name = "savings Controllers";
+			sourceTree = "<group>";
+		};
+		CEA30D25163EC9290008D6EB /* settings */ = {
+			isa = PBXGroup;
+			children = (
+				CEA30D28163ECA200008D6EB /* Settings.bundle */,
+			);
+			name = settings;
+			sourceTree = "<group>";
+		};
+		CEA30D2A163F40310008D6EB /* images */ = {
+			isa = PBXGroup;
+			children = (
+				CEA30D2B163F40430008D6EB /* loans.png */,
+				CEA30D2C163F40430008D6EB /* savings.png */,
+			);
+			name = images;
+			sourceTree = "<group>";
+		};
+		CEBCBAFC163A2EE8002EAECC /* Customer */ = {
+			isa = PBXGroup;
+			children = (
+				CEBCBAF9163A2EDD002EAECC /* ViewAllCusotmerCotnroller.h */,
+				CEBCBAFA163A2EDD002EAECC /* ViewAllCusotmerCotnroller.m */,
+				CEBCBB00163A34A6002EAECC /* CustomerViewController.h */,
+				CEBCBB01163A34A6002EAECC /* CustomerViewController.m */,
+			);
+			name = Customer;
+			sourceTree = "<group>";
+		};
+		CEDADB4316165C7E00042942 = {
+			isa = PBXGroup;
+			children = (
+				CEDADB5816165C7E00042942 /* SaveCal */,
+				CEDADB5116165C7E00042942 /* Frameworks */,
+				CEDADB4F16165C7E00042942 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CEDADB4F16165C7E00042942 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CEDADB4E16165C7E00042942 /* SaveCal.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CEDADB5116165C7E00042942 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CEE570791634A9150096BE8C /* CoreData.framework */,
+				CEDADB5216165C7E00042942 /* UIKit.framework */,
+				CEDADB5416165C7E00042942 /* Foundation.framework */,
+				CEDADB5616165C7E00042942 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CEDADB5816165C7E00042942 /* SaveCal */ = {
+			isa = PBXGroup;
+			children = (
+				CEA30D2A163F40310008D6EB /* images */,
+				CEA30D25163EC9290008D6EB /* settings */,
+				CEE570FF1635D7A60096BE8C /* controller */,
+				CEE570FE1635D76B0096BE8C /* model */,
+				CEE570FD1635D7570096BE8C /* view */,
+				CEE570FC1635D7440096BE8C /* data */,
+				CEDADB6116165C7E00042942 /* AppDelegate.h */,
+				CEDADB6216165C7E00042942 /* AppDelegate.m */,
+				CEDADB6A16165C7E00042942 /* MainStoryboard.storyboard */,
+				CEDADB5916165C7E00042942 /* Supporting Files */,
+			);
+			path = SaveCal;
+			sourceTree = "<group>";
+		};
+		CEDADB5916165C7E00042942 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				CEDADB5A16165C7E00042942 /* SaveCal-Info.plist */,
+				CEDADB5B16165C7E00042942 /* InfoPlist.strings */,
+				CEDADB5E16165C7E00042942 /* main.m */,
+				CEDADB6016165C7E00042942 /* SaveCal-Prefix.pch */,
+				CEDADB6416165C7E00042942 /* Default.png */,
+				CEDADB6616165C7E00042942 /* Default@2x.png */,
+				CEDADB6816165C7E00042942 /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		CEE570FC1635D7440096BE8C /* data */ = {
+			isa = PBXGroup;
+			children = (
+				CEE570751634A8FD0096BE8C /* Model.xcdatamodeld */,
+				CE2AD9051636092500E05222 /* SavingsProfileData.h */,
+				CE2AD9061636092500E05222 /* SavingsProfileData.m */,
+				CEE5707B1634ABDA0096BE8C /* LoanProfileData.h */,
+				CEE5707C1634ABDA0096BE8C /* LoanProfileData.m */,
+				CEBCBAF0163A04E1002EAECC /* CustomerData.h */,
+				CEBCBAF1163A04E1002EAECC /* CustomerData.m */,
+				CEBCBAF6163A1CAC002EAECC /* AddressData.h */,
+				CEBCBAF7163A1CAD002EAECC /* AddressData.m */,
+			);
+			name = data;
+			sourceTree = "<group>";
+		};
+		CEE570FD1635D7570096BE8C /* view */ = {
+			isa = PBXGroup;
+			children = (
+				CEBA35FC16333EC400BA8645 /* UniformCashFlowView.h */,
+				CEBA35FD16333EC400BA8645 /* UniformCashFlowView.m */,
+			);
+			name = view;
+			sourceTree = "<group>";
+		};
+		CEE570FE1635D76B0096BE8C /* model */ = {
+			isa = PBXGroup;
+			children = (
+				CEDADB7C1619D76400042942 /* CashFlowAnalyzer.h */,
+				CEDADB7D1619D76400042942 /* CashFlowAnalyzer.m */,
+				CEBA35FF1633553D00BA8645 /* LoanProfile.h */,
+				CEBA36001633553D00BA8645 /* LoanProfile.m */,
+				CE2AD9091636094900E05222 /* SavingsProfile.h */,
+				CE2AD90A1636094900E05222 /* SavingsProfile.m */,
+			);
+			name = model;
+			sourceTree = "<group>";
+		};
+		CEE570FF1635D7A60096BE8C /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				CEBCBAFC163A2EE8002EAECC /* Customer */,
+				CEE571041635F2F60096BE8C /* MainMenuViewController.h */,
+				CEE571051635F2F60096BE8C /* MainMenuViewController.m */,
+				CE2AD90C1636513F00E05222 /* savings Controllers */,
+				CEE5710A1635F6FC0096BE8C /* loan Controllers */,
+			);
+			name = controller;
+			sourceTree = "<group>";
+		};
+		CEE5710A1635F6FC0096BE8C /* loan Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				CEBCBADE1639099A002EAECC /* LoanDisplayViewController.h */,
+				CEBCBADF1639099A002EAECC /* LoanDisplayViewController.m */,
+				CEE57082163514A50096BE8C /* ViewAllLoanProfilesController.h */,
+				CEE57083163514A50096BE8C /* ViewAllLoanProfilesController.m */,
+				CEBCBAE116398B91002EAECC /* LoanAdvancedViewController.h */,
+				CEBCBAE216398B91002EAECC /* LoanAdvancedViewController.m */,
+			);
+			name = "loan Controllers";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CEDADB4D16165C7E00042942 /* SaveCal */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CEDADB7216165C7E00042942 /* Build configuration list for PBXNativeTarget "SaveCal" */;
+			buildPhases = (
+				CEDADB4A16165C7E00042942 /* Sources */,
+				CEDADB4B16165C7E00042942 /* Frameworks */,
+				CEDADB4C16165C7E00042942 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SaveCal;
+			productName = SaveCal;
+			productReference = CEDADB4E16165C7E00042942 /* SaveCal.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CEDADB4516165C7E00042942 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0450;
+				ORGANIZATIONNAME = user;
+			};
+			buildConfigurationList = CEDADB4816165C7E00042942 /* Build configuration list for PBXProject "SaveCal" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = CEDADB4316165C7E00042942;
+			productRefGroup = CEDADB4F16165C7E00042942 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CEDADB4D16165C7E00042942 /* SaveCal */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CEDADB4C16165C7E00042942 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CEDADB5D16165C7E00042942 /* InfoPlist.strings in Resources */,
+				CEDADB6516165C7E00042942 /* Default.png in Resources */,
+				CEDADB6716165C7E00042942 /* Default@2x.png in Resources */,
+				CEDADB6916165C7E00042942 /* Default-568h@2x.png in Resources */,
+				CEDADB6C16165C7E00042942 /* MainStoryboard.storyboard in Resources */,
+				CEA30D29163ECA200008D6EB /* Settings.bundle in Resources */,
+				CEA30D2D163F40430008D6EB /* loans.png in Resources */,
+				CEA30D2E163F40430008D6EB /* savings.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CEDADB4A16165C7E00042942 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CEDADB5F16165C7E00042942 /* main.m in Sources */,
+				CEDADB6316165C7E00042942 /* AppDelegate.m in Sources */,
+				CEDADB7E1619D76400042942 /* CashFlowAnalyzer.m in Sources */,
+				CEBA35FE16333EC400BA8645 /* UniformCashFlowView.m in Sources */,
+				CEBA36011633553D00BA8645 /* LoanProfile.m in Sources */,
+				CEE570771634A8FD0096BE8C /* Model.xcdatamodeld in Sources */,
+				CEE5707D1634ABDA0096BE8C /* LoanProfileData.m in Sources */,
+				CEE57084163514A50096BE8C /* ViewAllLoanProfilesController.m in Sources */,
+				CEE571061635F2F70096BE8C /* MainMenuViewController.m in Sources */,
+				CE2AD9071636092500E05222 /* SavingsProfileData.m in Sources */,
+				CE2AD90B1636094900E05222 /* SavingsProfile.m in Sources */,
+				CE2AD90F1636518500E05222 /* ViewAllSavingsProfilesController.m in Sources */,
+				CE2AD9121636525D00E05222 /* SavingsViewController.m in Sources */,
+				CE2AD91516365C6000E05222 /* SavingsAdvancedViewController.m in Sources */,
+				CEBCBAE01639099A002EAECC /* LoanDisplayViewController.m in Sources */,
+				CEBCBAE316398B91002EAECC /* LoanAdvancedViewController.m in Sources */,
+				CEBCBAF2163A04E1002EAECC /* CustomerData.m in Sources */,
+				CEBCBAF8163A1CAD002EAECC /* AddressData.m in Sources */,
+				CEBCBAFB163A2EDE002EAECC /* ViewAllCusotmerCotnroller.m in Sources */,
+				CEBCBB02163A34A6002EAECC /* CustomerViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		CEDADB5B16165C7E00042942 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CEDADB5C16165C7E00042942 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		CEDADB6A16165C7E00042942 /* MainStoryboard.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CEDADB6B16165C7E00042942 /* en */,
+			);
+			name = MainStoryboard.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CEDADB7016165C7E00042942 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		CEDADB7116165C7E00042942 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CEDADB7316165C7E00042942 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SaveCal/SaveCal-Prefix.pch";
+				INFOPLIST_FILE = "SaveCal/SaveCal-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		CEDADB7416165C7E00042942 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SaveCal/SaveCal-Prefix.pch";
+				INFOPLIST_FILE = "SaveCal/SaveCal-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CEDADB4816165C7E00042942 /* Build configuration list for PBXProject "SaveCal" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CEDADB7016165C7E00042942 /* Debug */,
+				CEDADB7116165C7E00042942 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CEDADB7216165C7E00042942 /* Build configuration list for PBXNativeTarget "SaveCal" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CEDADB7316165C7E00042942 /* Debug */,
+				CEDADB7416165C7E00042942 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		CEE570751634A8FD0096BE8C /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				CEE570761634A8FD0096BE8C /* Model.xcdatamodel */,
+			);
+			currentVersion = CEE570761634A8FD0096BE8C /* Model.xcdatamodel */;
+			path = Model.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = CEDADB4516165C7E00042942 /* Project object */;
+}
