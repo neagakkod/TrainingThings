@@ -19,6 +19,8 @@
 @implementation ViewAllSavingsProfilesController
 @synthesize theSavingsProfiles;
 @synthesize onlineMode;
+@synthesize overlay;
+@synthesize actView;
 - (id)initWithStyle:(UITableViewStyle)style
 {
     self = [super initWithStyle:style];
@@ -32,6 +34,22 @@
 {
     [super viewDidLoad];
     
+    self.overlay= [[UIView alloc] initWithFrame:CGRectMake(0, 0, 320, self.tableView.frame.size.height)];
+    [self.overlay setHidden:YES];
+    self.overlay.backgroundColor=[UIColor blackColor];
+    
+    [self.view addSubview:self.overlay];
+    
+    //activity indicator view
+    self.actView=[[UIActivityIndicatorView alloc]initWithFrame:CGRectMake(self.view.frame.size.width/2-50, self.view.frame.size.height/2-50, 100, 100)];
+    
+    [self.actView setActivityIndicatorViewStyle:UIActivityIndicatorViewStyleWhiteLarge];
+    
+    [self.overlay addSubview:self.actView];
+    
+      
+    
+    
     SavingsProfileData* spd=[SavingsProfileData getInstance];
     self.theSavingsProfiles=[spd findAllprofiles];
      NSLog(@"Displaying all savings profiles");
@@ -40,18 +58,17 @@
     self.onlineMode=NO;
    
 
-
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
- 
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 -(void)viewDidAppear:(BOOL)animated
 {
     
-    [super viewWillAppear:animated];
     
+    [super viewWillAppear:animated];
+    UILabel*loadingOnline=[[UILabel alloc] initWithFrame:CGRectMake(self.view.frame.size.width/2-60,self.actView.center.y-100 , self.view.frame.size.width/2 , self.view.frame.size.width/4)];
+    loadingOnline.text=@"Fetching Info";
+    [loadingOnline setTextColor:[UIColor whiteColor]];
+    [loadingOnline setBackgroundColor:[UIColor clearColor]];
+    [self.overlay addSubview:loadingOnline];
     if (!self.onlineMode)
     {
         SavingsProfileData* spd=[SavingsProfileData getInstance];
@@ -149,6 +166,9 @@
     }
     else
     {
+        [self.overlay setHidden:NO];
+        [self.actView startAnimating];
+        
         [self findAllprofiles];
         [[self.toolbarItems objectAtIndex:0] setTitle:@"Profiles on Phone"];
     }
@@ -166,11 +186,12 @@
         NSMutableArray* tb=[[ NSMutableArray alloc] initWithArray:  self.toolbarItems];
         [tb replaceObjectAtIndex:2 withObject:[[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(showDelete:)]];
         [self setToolbarItems:tb];
-
+        [[self.toolbarItems objectAtIndex:0] setEnabled:NO];
         self.tableView.editing = YES;
     }
     else
     {
+          [[self.toolbarItems objectAtIndex:0] setEnabled:YES];
         
         NSMutableArray* tb=[[ NSMutableArray alloc] initWithArray:  self.toolbarItems];
         [tb replaceObjectAtIndex:2 withObject:[[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemTrash target:self action:@selector(showDelete:)]];
@@ -247,35 +268,46 @@
 
 -(IBAction) dataFetched: (NSData*) response
 {
-    NSError* error;
-    NSArray* jsonData=[NSJSONSerialization JSONObjectWithData:response options:kNilOptions error:&error];
-    
-    if(error)
+    if (response!=nil)
     {
-        NSLog(@"%@", [error localizedDescription]);
-    }
+        
     
-    
-    NSLog(@"data: %@",jsonData);
-    
-    
-    
-    //////////
-    
-    NSMutableArray* results=[[NSMutableArray alloc] init];
-    NSArray*allProfiles=jsonData;//self.theSavingsProfiles;
-    
-    for (int i=0; i<[allProfiles count]; i++)
-    {
-        [results addObject: [[SavingsProfile alloc]initCreateSavingsProfile_name:[[allProfiles objectAtIndex:i] objectForKey:@"name"] startingWith:[[[allProfiles objectAtIndex:i] objectForKey:@"startingWith"] doubleValue] savingsTime:[[[allProfiles objectAtIndex:i] objectForKey:@"savingsTime"] doubleValue] equalDepositAmount:[[[allProfiles objectAtIndex:i] objectForKey:@"equalDepositsAmount"] doubleValue] yearlyIntRate:[[[allProfiles objectAtIndex:i] objectForKey:@"yearlyInterestRate"] doubleValue]  goal:[[[allProfiles objectAtIndex:i] objectForKey:@"goal"] doubleValue] ]];
-    }
-    
-    self.theSavingsProfiles=results;
-    [[self.toolbarItems objectAtIndex:2] setEnabled:NO];
-    [self setOnlineMode: YES];
-    [self.tableView reloadData];
+            NSError* error;
+            NSArray* jsonData=[NSJSONSerialization JSONObjectWithData:response options:kNilOptions error:&error];
+            if(error)
+            {
+                NSLog(@"Error Description:%@", [error localizedDescription]);
+            }
 
-    
+
+            NSLog(@"data: %@",jsonData);
+
+
+
+            //////////
+
+            NSMutableArray* results=[[NSMutableArray alloc] init];
+            NSArray*allProfiles=jsonData;//self.theSavingsProfiles;
+
+            for (int i=0; i<[allProfiles count]; i++)
+            {
+                [results addObject: [[SavingsProfile alloc]initCreateSavingsProfile_name:[[allProfiles objectAtIndex:i] objectForKey:@"name"] startingWith:[[[allProfiles objectAtIndex:i] objectForKey:@"startingWith"] doubleValue] savingsTime:[[[allProfiles objectAtIndex:i] objectForKey:@"savingsTime"] doubleValue] equalDepositAmount:[[[allProfiles objectAtIndex:i] objectForKey:@"equalDepositsAmount"] doubleValue] yearlyIntRate:[[[allProfiles objectAtIndex:i] objectForKey:@"yearlyInterestRate"] doubleValue]  goal:[[[allProfiles objectAtIndex:i] objectForKey:@"goal"] doubleValue] ]];
+            }
+
+            self.theSavingsProfiles=results;
+            [[self.toolbarItems objectAtIndex:2] setEnabled:NO];
+            [self setOnlineMode: YES];
+            [self.tableView reloadData];
+    }
+    else
+    {
+        UIAlertView*alret=[[UIAlertView alloc]initWithTitle:@"Connection Issues" message:@"Wow! We are experiencing server issues. Try again later" delegate:self cancelButtonTitle:@"ok" otherButtonTitles: nil];
+        [alret show];
+        self.onlineMode=NO;
+        [[self.toolbarItems objectAtIndex:2] setEnabled:YES];
+    }
+    [self.overlay setHidden:YES];
+    [self.actView stopAnimating];
 }
 
 

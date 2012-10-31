@@ -33,16 +33,30 @@
     CustomerData* cd= [CustomerData getInstance];
     NSLog(@"max cid:%i",   [cd maxcID]);
    self.theCustomers= [cd findCustomers];
-
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
  
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    self.overlayView= [[UIView alloc] initWithFrame:CGRectMake(0, 0, 320, self.tableView.frame.size.height)];
+    [self.overlayView setHidden:YES];
+    self.overlayView.backgroundColor=[UIColor blackColor];
     
+    [self.view addSubview:self.overlayView];
+    
+    //activity indicator view
+    self.actView=[[UIActivityIndicatorView alloc]initWithFrame:CGRectMake(self.view.frame.size.width/2-50, self.view.frame.size.height/2-50, 100, 100)];
+    
+    [self.actView setActivityIndicatorViewStyle:UIActivityIndicatorViewStyleWhiteLarge];
+    
+    [self.overlayView addSubview:self.actView];
 }
 -(void)viewDidAppear:(BOOL)animated
 {
+    
+    UILabel*loadingOnline=[[UILabel alloc] initWithFrame:CGRectMake(self.view.frame.size.width/2-60,self.actView.center.y-100 , self.view.frame.size.width/2 , self.view.frame.size.width/4)];
+    loadingOnline.text=@"Fetching Info";
+    [loadingOnline setTextColor:[UIColor whiteColor]];
+    [loadingOnline setBackgroundColor:[UIColor clearColor]];
+    [self.overlayView addSubview:loadingOnline];
+
+    
     CustomerData* cd= [CustomerData getInstance];
    
     self.theCustomers= [cd findCustomers];
@@ -188,8 +202,11 @@
 {
     if ( !self.onlineMode)
     {
+        [self.overlayView setHidden:NO];
+        [self.actView startAnimating];
         [self findAllprofiles];
         [[self.toolbarItems objectAtIndex:0] setTitle:@"Profiles on Phone"];
+        self.onlineMode=YES;
         
     }
     else
@@ -289,10 +306,12 @@
     }
     
     self.theCustomers=results;
-   // [[self.toolbarItems objectAtIndex:2] setEnabled:NO];
+  
+    
     [self setOnlineMode: YES];
     [self.tableView reloadData];
-    
+    [self.overlayView setHidden:YES];
+    [self.actView stopAnimating];
     
 }
 

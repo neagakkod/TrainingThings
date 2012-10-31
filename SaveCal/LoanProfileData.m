@@ -236,8 +236,10 @@ static LoanProfileData* instance=nil;
     }
     else
     {
+        UIAlertView* alert= [[UIAlertView alloc] initWithTitle:@"Congrats!" message:[NSString stringWithFormat:@"Woah.You Inserted With Success!"] delegate:nil cancelButtonTitle:@"ok" otherButtonTitles: nil];
+        [alert show];
           NSLog( @"contact saved");
-          }
+    }
     
 
 }
@@ -308,6 +310,8 @@ static LoanProfileData* instance=nil;
     }
     else
     {
+        UIAlertView* alert= [[UIAlertView alloc] initWithTitle:@"update succesful" message:[NSString stringWithFormat:@"Woah.Your Update Was succesful! "] delegate:nil cancelButtonTitle:@"ok" otherButtonTitles: nil];
+        [alert show];
         NSLog( @"contact saved");
     }
     

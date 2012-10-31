@@ -26,11 +26,34 @@
 @synthesize lprofile;
 @synthesize sprofile;
 @synthesize loan;
+static double initialXMargin=0;
+static double initialYMargin=0;
+static int drawingCount=0;
 
+#pragma  mark static methods
++(int)getDrawingNumber
+
+{
+    return drawingCount;
+}
+
++(double)getInitialXMargin
+{
+    return initialXMargin;
+}
+
++(double)getInitialYMargin
+{
+    return initialYMargin;
+}
+
+
+#pragma mark dynamic methods
 - (id)initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];
-    if (self) {
+    if (self)
+    {
         // Initialization code
     }
     return self;
@@ -43,8 +66,10 @@
 {
     // Drawing code
     
+    drawingCount++;
     
-    [self removeLabels];
+  
+   // [self removeLabels];
     [self drawEmptyGraph];
     if (self.loan==1)
     {
@@ -117,7 +142,17 @@
     
     self.xMargin=self.frame.size.width/50;
     self.yMargin=self.frame.size.height/50;
-     
+    
+    
+    if (drawingCount==1)
+    {
+        initialYMargin=self.yMargin;
+        initialXMargin=self.xMargin;
+    }
+    self.yMargin=initialYMargin;
+    self.xMargin=initialXMargin;
+    
+    
     self.lengthOfMoneyAxis=self.frame.size.height-yMargin;
     
   //  [self calculateNewTimeAxis];
@@ -145,7 +180,8 @@
 }
 -(double)scaleToGraph_highestValue:(double)hightestValue currentValue:(double)currentValue
 {
-    double graphTallestHeight=(3*lengthOfMoneyAxis)/4;
+    
+    double graphTallestHeight=(3*lengthOfMoneyAxis)/4-initialYMargin;
     double x;
     x=(graphTallestHeight*currentValue)/hightestValue;
     return  x;
@@ -166,7 +202,7 @@
         [self putLabels_timeIntervals:timeIntervals];
 
     }
-    
+     
     
     
     UIBezierPath*  d,*r;//,*limit;
@@ -179,7 +215,7 @@
         float ley=self.middleAxis- [self scaleToGraph_highestValue:lendingAmount currentValue:lendingAmount-[cfa getUniformCashFlowPresentWorth_amount:equalPaymentAmount interestRate:interestRate timeInterval:i]];
         float lex=intervalLength*i+xMargin;
         
-        NSLog(@"%f",ley);
+      //  NSLog(@"%f",ley);
         
         
         d=  [UIBezierPath bezierPath];
@@ -242,7 +278,8 @@
           
         intervalLength= self.lengthOfTimeAxis/timeIntervals;
            [self putLabels_timeIntervals:timeIntervals];
-        
+      //
+        self.currentimes=timeIntervals;
       
         
         UIBezierPath*  d,*r;//,*limit;
@@ -255,8 +292,8 @@
             float ley=self.middleAxis- [self scaleToGraph_highestValue:goal currentValue:[cfa getUniformCashFlowFutureValue_amount:equalDepositAmount interestRate:interestRate timeInterval:i]];
             float lex=intervalLength*i;//+xMargin;
             
-            NSLog(@"%f",ley);
-            NSLog(@"ley is :goal-%f",[cfa getUniformCashFlowFutureValue_amount:equalDepositAmount interestRate:interestRate timeInterval:i]);
+           // NSLog(@"%f",ley);
+            //NSLog(@"ley is :goal-%f",[cfa getUniformCashFlowFutureValue_amount:equalDepositAmount interestRate:interestRate timeInterval:i]);
             
             d=  [UIBezierPath bezierPath];
             r= [UIBezierPath bezierPath];
@@ -284,34 +321,49 @@
 }
 -(void)putLabels_timeIntervals:(int)timeIntervals
 {
+    self.currentimes=timeIntervals;
     double intervalLength= self.lengthOfTimeAxis/(timeIntervals+1);
     UILabel* number;
+    if ([self.subviews count] >0)
+    {
+        UILabel* currentLabel;
+        for (int i=0; i<[self.subviews count]; i++)
+        {
+            if ([[self.subviews objectAtIndex:i] isKindOfClass:[UILabel class]] )
+            {
+                currentLabel=[self.subviews objectAtIndex:i];
+                currentLabel.text=@"";
+               // [currentLabel removeFromSuperview];
+            }
+        }
+    }
+    
     for (int i=0; i<=timeIntervals; i++)
     {
-        number= [[UILabel alloc] initWithFrame:CGRectMake(intervalLength*i+xMargin, self.middleAxis+5, 10, 10)];
+        number= [[UILabel alloc] initWithFrame:CGRectMake(intervalLength*i+xMargin, self.middleAxis+3, 10, 10)];
+        number.numberOfLines=2;
         number.text=[NSString stringWithFormat:@"%i",i ];
-        number.font= [UIFont systemFontOfSize:8];
-        number.backgroundColor=[UIColor clearColor];//self.backgroundColor;
-        number.textColor=[UIColor redColor ];
+        if ([number.text length]>2)
+        {
+         //  number.text= [self breakIt:number.text];
+           // NSLog(@"%@",number.text);
+            [number setFrame:CGRectMake(intervalLength*i+xMargin, self.middleAxis-10, 10, 40)];
+        }
         
+        number.font= [UIFont systemFontOfSize:8];
+        number.backgroundColor=[UIColor clearColor];
+        number.textColor=[UIColor redColor ];
+    
         [self addSubview:number];
         
     }
+[self setNeedsLayout];
 }
-
--(void)removeLabels
+-(NSString*)breakIt:(NSString*)thedigits
 {
-    if (self.currentimes>0) {
-        for (int i=0; i<=self.currentimes; i++)
-        {
-            [[self.subviews objectAtIndex:i] removeFromSuperview];
-            
-        }
-
-    }
-    
-    
+   return  [ NSString stringWithFormat:@"%@\n%@",[thedigits substringToIndex:1],[thedigits substringFromIndex:2] ];
 }
+
 
 
 

@@ -14,6 +14,8 @@
 
 @property(strong,nonatomic)NSArray*theLoanProfiles;
 @property (nonatomic)BOOL onlineMode;
+@property (strong,nonatomic)UIView*overlayView;
+@property (strong, nonatomic)UIActivityIndicatorView* actView;
 - (IBAction)goOnline:(id)sender;
 -(IBAction)backToMenu:(id)sender;
 -(IBAction)showDelete:(id)sender;

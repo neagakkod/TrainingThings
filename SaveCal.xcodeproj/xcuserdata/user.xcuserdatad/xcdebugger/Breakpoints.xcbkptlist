@@ -21,11 +21,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "SaveCal/UniformCashFlowView.m"
-         timestampString = "373184581.408757"
+         timestampString = "373331492.848656"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "157"
-         endingLineNumber = "157"
+         startingLineNumber = "193"
+         endingLineNumber = "193"
          landmarkName = "-generateGraph_lendingAmount:interestRate:equalPaymentAmount:timeIntervals:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -34,11 +34,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "SaveCal/UniformCashFlowView.m"
-         timestampString = "373163270.919038"
+         timestampString = "373331341.700605"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "45"
-         endingLineNumber = "45"
+         startingLineNumber = "68"
+         endingLineNumber = "68"
          landmarkName = "-drawRect:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -47,11 +47,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "SaveCal/UniformCashFlowView.m"
-         timestampString = "373163270.919038"
+         timestampString = "373331341.700605"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "47"
-         endingLineNumber = "47"
+         startingLineNumber = "72"
+         endingLineNumber = "72"
          landmarkName = "-drawRect:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -86,11 +86,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "SaveCal/UniformCashFlowView.m"
-         timestampString = "373184581.408757"
+         timestampString = "373331492.848656"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "170"
-         endingLineNumber = "170"
+         startingLineNumber = "206"
+         endingLineNumber = "206"
          landmarkName = "-generateGraph_lendingAmount:interestRate:equalPaymentAmount:timeIntervals:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -99,11 +99,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "SaveCal/LoanProfileData.m"
-         timestampString = "373092683.279996"
+         timestampString = "373344047.395466"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "246"
-         endingLineNumber = "246"
+         startingLineNumber = "248"
+         endingLineNumber = "248"
          landmarkName = "-getMaxID"
          landmarkType = "5">
       </FileBreakpoint>
@@ -125,11 +125,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "SaveCal/LoanProfileData.m"
-         timestampString = "373092683.279996"
+         timestampString = "373344047.395466"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "247"
-         endingLineNumber = "247"
+         startingLineNumber = "249"
+         endingLineNumber = "249"
          landmarkName = "-getMaxID"
          landmarkType = "5">
       </FileBreakpoint>
@@ -164,11 +164,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "SaveCal/LoanProfileData.m"
-         timestampString = "373233090.032167"
+         timestampString = "373344047.395466"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "361"
-         endingLineNumber = "361"
+         startingLineNumber = "365"
+         endingLineNumber = "365"
          landmarkName = "-findAllprofiles"
          landmarkType = "5">
       </FileBreakpoint>
@@ -177,11 +177,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "SaveCal/ViewAllLoanProfilesController.m"
-         timestampString = "373263441.094531"
+         timestampString = "373350694.233436"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "218"
-         endingLineNumber = "218"
+         startingLineNumber = "244"
+         endingLineNumber = "244"
          landmarkName = "-prepareForSegue:sender:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -203,11 +203,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "SaveCal/LoanProfileData.m"
-         timestampString = "373092683.279996"
+         timestampString = "373344047.395466"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "289"
-         endingLineNumber = "289"
+         startingLineNumber = "291"
+         endingLineNumber = "291"
          landmarkName = "-updateLoanProfile_id:name:loanAmount:payBackTime:equalPaymentAmount:yearlyIntRate:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -229,11 +229,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "SaveCal/LoanProfileData.m"
-         timestampString = "373233090.032167"
+         timestampString = "373344047.395466"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "388"
-         endingLineNumber = "388"
+         startingLineNumber = "392"
+         endingLineNumber = "392"
          landmarkName = "-updateLoanProfile_lp:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -320,11 +320,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "SaveCal/ViewAllSavingsProfilesController.m"
-         timestampString = "373088748.509835"
+         timestampString = "373348938.926541"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "220"
-         endingLineNumber = "220"
+         startingLineNumber = "241"
+         endingLineNumber = "241"
          landmarkName = "-prepareForSegue:sender:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -333,11 +333,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "SaveCal/UniformCashFlowView.m"
-         timestampString = "373184581.408757"
+         timestampString = "373331492.848656"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "227"
-         endingLineNumber = "227"
+         startingLineNumber = "263"
+         endingLineNumber = "263"
          landmarkName = "-generateGraph_initialDeposit:interestRate:timeIntervals:goal:equalDepositAmount:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -372,11 +372,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "SaveCal/UniformCashFlowView.m"
-         timestampString = "373184581.408757"
+         timestampString = "373331492.848656"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "252"
-         endingLineNumber = "252"
+         startingLineNumber = "289"
+         endingLineNumber = "289"
          landmarkName = "-generateGraph_initialDeposit:interestRate:timeIntervals:goal:equalDepositAmount:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -476,11 +476,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "SaveCal/LoanProfileData.m"
-         timestampString = "373233090.032167"
+         timestampString = "373344047.395466"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "377"
-         endingLineNumber = "377"
+         startingLineNumber = "381"
+         endingLineNumber = "381"
          landmarkName = "-findByID_id:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -541,11 +541,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "SaveCal/ViewAllLoanProfilesController.m"
-         timestampString = "373263441.094531"
+         timestampString = "373350694.233436"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "137"
-         endingLineNumber = "137"
+         startingLineNumber = "163"
+         endingLineNumber = "163"
          landmarkName = "-backToMenu:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -619,11 +619,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "SaveCal/ViewAllCusotmerCotnroller.m"
-         timestampString = "373304722.99183"
+         timestampString = "373351051.898667"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "169"
-         endingLineNumber = "169"
+         startingLineNumber = "183"
+         endingLineNumber = "183"
          landmarkName = "-prepareForSegue:sender:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -866,11 +866,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "SaveCal/ViewAllSavingsProfilesController.m"
-         timestampString = "373086963.287578"
+         timestampString = "373348938.926541"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "139"
-         endingLineNumber = "139"
+         startingLineNumber = "156"
+         endingLineNumber = "156"
          landmarkName = "-showOnlineProfiles:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -878,25 +878,12 @@
          shouldBeEnabled = "No"
          ignoreCount = "0"
          continueAfterRunningActions = "No"
-         filePath = "SaveCal/ViewAllSavingsProfilesController.m"
-         timestampString = "373088748.509835"
-         startingColumnNumber = "9223372036854775807"
-         endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "253"
-         endingLineNumber = "253"
-         landmarkName = "-dataFetched:"
-         landmarkType = "5">
-      </FileBreakpoint>
-      <FileBreakpoint
-         shouldBeEnabled = "No"
-         ignoreCount = "0"
-         continueAfterRunningActions = "No"
          filePath = "SaveCal/LoanDisplayViewController.m"
-         timestampString = "373242206.676282"
+         timestampString = "373338355.251021"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "103"
-         endingLineNumber = "103"
+         startingLineNumber = "105"
+         endingLineNumber = "105"
          landmarkName = "-viewDidAppear:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -905,11 +892,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "SaveCal/LoanDisplayViewController.m"
-         timestampString = "373242206.676282"
+         timestampString = "373338355.251021"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "96"
-         endingLineNumber = "96"
+         startingLineNumber = "98"
+         endingLineNumber = "98"
          landmarkName = "-viewDidAppear:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -944,11 +931,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "SaveCal/LoanProfileData.m"
-         timestampString = "373233090.032167"
+         timestampString = "373344047.395466"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "357"
-         endingLineNumber = "357"
+         startingLineNumber = "361"
+         endingLineNumber = "361"
          landmarkName = "-insertLoanProfile_lp:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -970,11 +957,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "SaveCal/LoanDisplayViewController.m"
-         timestampString = "373242206.676282"
+         timestampString = "373338355.251021"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "238"
-         endingLineNumber = "238"
+         startingLineNumber = "241"
+         endingLineNumber = "241"
          landmarkName = "-addPressed:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -996,24 +983,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "SaveCal/LoanDisplayViewController.m"
-         timestampString = "373306781.290969"
+         timestampString = "373339118.340937"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "298"
-         endingLineNumber = "298"
-         landmarkName = "-textFieldShouldReturn:"
-         landmarkType = "5">
-      </FileBreakpoint>
-      <FileBreakpoint
-         shouldBeEnabled = "No"
-         ignoreCount = "0"
-         continueAfterRunningActions = "No"
-         filePath = "SaveCal/LoanDisplayViewController.m"
-         timestampString = "373306781.290969"
-         startingColumnNumber = "9223372036854775807"
-         endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "295"
-         endingLineNumber = "295"
+         startingLineNumber = "345"
+         endingLineNumber = "345"
          landmarkName = "-textFieldShouldReturn:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -1022,11 +996,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "SaveCal/UniformCashFlowView.m"
-         timestampString = "373163270.919038"
+         timestampString = "373331341.700605"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "65"
-         endingLineNumber = "65"
+         startingLineNumber = "90"
+         endingLineNumber = "90"
          landmarkName = "-drawRect:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -1035,11 +1009,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "SaveCal/UniformCashFlowView.m"
-         timestampString = "373163270.919038"
+         timestampString = "373331341.700605"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "56"
-         endingLineNumber = "56"
+         startingLineNumber = "81"
+         endingLineNumber = "81"
          landmarkName = "-drawRect:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -1113,11 +1087,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "SaveCal/LoanDisplayViewController.m"
-         timestampString = "373242206.676282"
+         timestampString = "373338355.251021"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "60"
-         endingLineNumber = "60"
+         startingLineNumber = "63"
+         endingLineNumber = "63"
          landmarkName = "-feedTheComponents"
          landmarkType = "5">
       </FileBreakpoint>
@@ -1165,11 +1139,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "SaveCal/UniformCashFlowView.m"
-         timestampString = "373173507.71417"
+         timestampString = "373331341.700605"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "72"
-         endingLineNumber = "72"
+         startingLineNumber = "97"
+         endingLineNumber = "97"
          landmarkName = "-setMainProfile_profileType:profile:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -1178,12 +1152,12 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "SaveCal/UniformCashFlowView.m"
-         timestampString = "373173589.812032"
+         timestampString = "373331341.700605"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "89"
-         endingLineNumber = "89"
-         landmarkName = "-strechNeeded"
+         startingLineNumber = "114"
+         endingLineNumber = "114"
+         landmarkName = "-needsToStrech"
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
@@ -1191,11 +1165,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "SaveCal/UniformCashFlowView.m"
-         timestampString = "373173785.864433"
+         timestampString = "373331341.700605"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "73"
-         endingLineNumber = "73"
+         startingLineNumber = "98"
+         endingLineNumber = "98"
          landmarkName = "-setMainProfile_profileType:profile:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -1217,11 +1191,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "SaveCal/LoanDisplayViewController.m"
-         timestampString = "373242206.676282"
+         timestampString = "373338355.251021"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "57"
-         endingLineNumber = "57"
+         startingLineNumber = "59"
+         endingLineNumber = "59"
          landmarkName = "-feedTheComponents"
          landmarkType = "5">
       </FileBreakpoint>
@@ -1229,25 +1203,12 @@
          shouldBeEnabled = "No"
          ignoreCount = "0"
          continueAfterRunningActions = "No"
-         filePath = "SaveCal/ViewAllLoanProfilesController.m"
-         timestampString = "373264013.698116"
-         startingColumnNumber = "9223372036854775807"
-         endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "278"
-         endingLineNumber = "278"
-         landmarkName = "-dataFetched:"
-         landmarkType = "5">
-      </FileBreakpoint>
-      <FileBreakpoint
-         shouldBeEnabled = "No"
-         ignoreCount = "0"
-         continueAfterRunningActions = "No"
          filePath = "SaveCal/LoanProfile.m"
-         timestampString = "373262504.010115"
+         timestampString = "373333139.058608"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "87"
-         endingLineNumber = "87"
+         startingLineNumber = "94"
+         endingLineNumber = "94"
          landmarkName = "-initCreateLoanProfile_name:loanAmount:payBackTime:equalPaymentAmount:yearlyIntRate:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -1256,11 +1217,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "SaveCal/ViewAllCusotmerCotnroller.m"
-         timestampString = "373304722.99183"
+         timestampString = "373351152.180877"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "277"
-         endingLineNumber = "277"
+         startingLineNumber = "294"
+         endingLineNumber = "294"
          landmarkName = "-dataFetched:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -1269,11 +1230,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "SaveCal/ViewAllCusotmerCotnroller.m"
-         timestampString = "373304722.99183"
+         timestampString = "373351152.180877"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "257"
-         endingLineNumber = "257"
+         startingLineNumber = "274"
+         endingLineNumber = "274"
          landmarkName = "-getAddress:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -1282,11 +1243,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "SaveCal/ViewAllCusotmerCotnroller.m"
-         timestampString = "373304722.99183"
+         timestampString = "373351152.180877"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "237"
-         endingLineNumber = "237"
+         startingLineNumber = "254"
+         endingLineNumber = "254"
          landmarkName = "-getAddress:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -1295,11 +1256,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "SaveCal/ViewAllCusotmerCotnroller.m"
-         timestampString = "373304722.99183"
+         timestampString = "373351051.898667"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "161"
-         endingLineNumber = "161"
+         startingLineNumber = "175"
+         endingLineNumber = "175"
          landmarkName = "-prepareForSegue:sender:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -1308,11 +1269,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "SaveCal/ViewAllCusotmerCotnroller.m"
-         timestampString = "373304722.99183"
+         timestampString = "373351152.180877"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "208"
-         endingLineNumber = "208"
+         startingLineNumber = "225"
+         endingLineNumber = "225"
          landmarkName = "-findChosenCustomerAddress"
          landmarkType = "5">
       </FileBreakpoint>
@@ -1321,11 +1282,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "SaveCal/ViewAllCusotmerCotnroller.m"
-         timestampString = "373304787.357677"
+         timestampString = "373351051.898667"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "150"
-         endingLineNumber = "150"
+         startingLineNumber = "164"
+         endingLineNumber = "164"
          landmarkName = "-prepareForSegue:sender:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -1340,6 +1301,97 @@
          startingLineNumber = "195"
          endingLineNumber = "195"
          landmarkName = "-feedTheUIOutlets"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "SaveCal/LoanProfile.m"
+         timestampString = "373333139.058608"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "72"
+         endingLineNumber = "72"
+         landmarkName = "-everythingIsFilled"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "SaveCal/LoanDisplayViewController.m"
+         timestampString = "373338355.251021"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "279"
+         endingLineNumber = "279"
+         landmarkName = "-updateGraph"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "SaveCal/LoanDisplayViewController.m"
+         timestampString = "373338355.251021"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "267"
+         endingLineNumber = "267"
+         landmarkName = "-updateGraph"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "SaveCal/LoanDisplayViewController.m"
+         timestampString = "373338327.245614"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "303"
+         endingLineNumber = "303"
+         landmarkName = "-validateTextFieldDecimalVal:"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "SaveCal/LoanDisplayViewController.m"
+         timestampString = "373339258.397693"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "304"
+         endingLineNumber = "304"
+         landmarkName = "-validateTextFieldDecimalVal:"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "SaveCal/ViewAllSavingsProfilesController.m"
+         timestampString = "373349157.027575"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "256"
+         endingLineNumber = "256"
+         landmarkName = "-findAllprofiles"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "SaveCal/ViewAllSavingsProfilesController.m"
+         timestampString = "373349890.769804"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "271"
+         endingLineNumber = "271"
+         landmarkName = "-dataFetched:"
          landmarkType = "5">
       </FileBreakpoint>
    </FileBreakpoints>

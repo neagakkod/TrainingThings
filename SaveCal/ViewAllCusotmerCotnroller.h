@@ -16,4 +16,8 @@
 -(IBAction)goOnline:(id)sender;
 @property (strong,nonatomic) NSMutableArray*theCustomers;
 @property (nonatomic) BOOL onlineMode;
+@property (strong,nonatomic) UIView*overlayView;
+@property (strong,nonatomic) UIActivityIndicatorView*actView;
+
+
 @end

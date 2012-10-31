@@ -3,10 +3,18 @@
    version = "1.0">
    <ContextStates>
       <ContextState
-         contextName = "-[CustomerViewController feedTheUIOutlets]:CustomerViewController.m">
+         contextName = "-[DisplayViewController addPressed:]:DisplayViewController.m">
          <PersistentStrings>
             <PersistentString
-               value = "self.theCustomer">
+               value = "self.lp">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[LoanDisplayViewController updateGraph]:LoanDisplayViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "[self.lp everythingIsFilled]">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -80,13 +88,13 @@
          contextName = "-[ViewAllLoanProfilesController prepareForSegue:sender:]:ViewAllLoanProfilesController.m">
          <PersistentStrings>
             <PersistentString
-               value = "[segue.identifier isEqualToString:edit]">
+               value = "segue.identifier">
             </PersistentString>
             <PersistentString
                value = "segue.identifier==edit">
             </PersistentString>
             <PersistentString
-               value = "segue.identifier">
+               value = "[segue.identifier isEqualToString:edit]">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -148,6 +156,20 @@
          contextName = "-[LoanAdvancedViewController interestChangded:]:LoanAdvancedViewController.m">
       </ContextState>
       <ContextState
+         contextName = "-[LoanProfile everythingIsFilled]:LoanProfile.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "(self.loanAmount&gt;0)">
+            </PersistentString>
+            <PersistentString
+               value = "(self.equalPaymentAmount&gt;0)">
+            </PersistentString>
+            <PersistentString
+               value = "[self everythingIsFilled]">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
          contextName = "-[LoanAdvancedViewController viewDidLoad]:LoanAdvancedViewController.m">
          <PersistentStrings>
             <PersistentString
@@ -181,18 +203,18 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "-[SavingsAdvancedViewController viewDidLoad]:SavingsAdvancedViewController.m">
+         contextName = "-[CustomerViewController feedTheUIOutlets]:CustomerViewController.m">
          <PersistentStrings>
             <PersistentString
-               value = "cSP.compounding">
+               value = "self.theCustomer">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "-[DisplayViewController addPressed:]:DisplayViewController.m">
+         contextName = "-[SavingsAdvancedViewController viewDidLoad]:SavingsAdvancedViewController.m">
          <PersistentStrings>
             <PersistentString
-               value = "self.lp">
+               value = "cSP.compounding">
             </PersistentString>
          </PersistentStrings>
       </ContextState>

@@ -62,6 +62,13 @@
 }
 -(BOOL)everythingIsFilled
 {
+    
+    NSLog(@"loanAmount:%d",(self.loanAmount>0));
+     NSLog(@"equalPayment:%d",(self.equalPaymentAmount>0));
+     NSLog(@"interestRate:%d",(self.interestRate>0));
+     NSLog(@"compouning:%d",(self.compounding>0));
+    NSLog(@"payment frequency:%d",(self.paymentFrequency>0));
+    
     return (self.loanAmount>0)&
            (self.equalPaymentAmount>0)&
            (self.interestRate>0)&
@@ -104,5 +111,18 @@
     return self;
     
         
+}
+
+-(id)init
+{
+   self=  [super init];
+    if (self)
+    {
+        
+        self.paymentFrequency=12;//this means 1/month payments
+        self.compounding=1;//this means no compounding
+
+    }
+    return self;
 }
 @end

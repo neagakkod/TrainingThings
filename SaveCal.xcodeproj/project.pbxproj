@@ -39,6 +39,7 @@
 		CEE5707D1634ABDA0096BE8C /* LoanProfileData.m in Sources */ = {isa = PBXBuildFile; fileRef = CEE5707C1634ABDA0096BE8C /* LoanProfileData.m */; };
 		CEE57084163514A50096BE8C /* ViewAllLoanProfilesController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEE57083163514A50096BE8C /* ViewAllLoanProfilesController.m */; };
 		CEE571061635F2F70096BE8C /* MainMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEE571051635F2F60096BE8C /* MainMenuViewController.m */; };
+		CEFDD7981640A36D00D53DE7 /* apple-touch-icon-iphone4.png in Resources */ = {isa = PBXBuildFile; fileRef = CEFDD7971640A36D00D53DE7 /* apple-touch-icon-iphone4.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -95,6 +96,7 @@
 		CEE57083163514A50096BE8C /* ViewAllLoanProfilesController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewAllLoanProfilesController.m; sourceTree = "<group>"; };
 		CEE571041635F2F60096BE8C /* MainMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainMenuViewController.h; sourceTree = "<group>"; };
 		CEE571051635F2F60096BE8C /* MainMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainMenuViewController.m; sourceTree = "<group>"; };
+		CEFDD7971640A36D00D53DE7 /* apple-touch-icon-iphone4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "apple-touch-icon-iphone4.png"; path = "SaveCal/apple-touch-icon-iphone4.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,6 +158,7 @@
 		CEDADB4316165C7E00042942 = {
 			isa = PBXGroup;
 			children = (
+				CEFDD7971640A36D00D53DE7 /* apple-touch-icon-iphone4.png */,
 				CEDADB5816165C7E00042942 /* SaveCal */,
 				CEDADB5116165C7E00042942 /* Frameworks */,
 				CEDADB4F16165C7E00042942 /* Products */,
@@ -334,6 +337,7 @@
 				CEA30D29163ECA200008D6EB /* Settings.bundle in Resources */,
 				CEA30D2D163F40430008D6EB /* loans.png in Resources */,
 				CEA30D2E163F40430008D6EB /* savings.png in Resources */,
+				CEFDD7981640A36D00D53DE7 /* apple-touch-icon-iphone4.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

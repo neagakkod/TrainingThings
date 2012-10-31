@@ -11,7 +11,8 @@
 @interface ViewAllSavingsProfilesController : UITableViewController
 @property(strong,nonatomic)NSArray*theSavingsProfiles;
 @property (nonatomic)BOOL onlineMode;
-
+@property (strong,nonatomic)UIView*overlay;
+@property (strong, nonatomic)UIActivityIndicatorView* actView;
 - (IBAction)showOnlineProfiles:(id)sender;
 -(IBAction)showDelete:(id)sender;
 @end

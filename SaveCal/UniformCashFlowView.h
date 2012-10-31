@@ -23,6 +23,10 @@
 @property (nonatomic) int currentimes;
 @property (nonatomic) double lengthOfMoneyAxis;
 @property (nonatomic) double lengthOfTimeAxis;
++(int)getDrawingNumber;
++(double) getInitialXMargin;
++(double) getInitialYMargin;
+
 -(BOOL)needsToStrech;
 -(void)drawEmptyGraph;
 -(void)setMainProfile_profileType:(NSString*)profileType profile:(id)profile;

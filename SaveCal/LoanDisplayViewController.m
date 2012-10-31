@@ -52,10 +52,13 @@
     self.borrowedAmount.text=[NSString stringWithFormat:@"%.02f",self.lp.loanAmount];
     self.yearlyInterest.text=[NSString stringWithFormat:@"%.02f%%",self.interestSlider.value *100];
     
+    
+   
      LoanProfileData* lpd= [LoanProfileData getInstance];
     
-      if (self.lp.lPId==0)
+    if (self.lp.lPId==0)
     {
+        
         
         [self.lp setCompounding:lpd.currentProdile.compounding];
         [self.lp setPaymentFrequency:lpd.currentProdile.paymentFrequency];
@@ -63,8 +66,7 @@
     }
       
     [lpd setCurrentProdile:self.lp];
-       //self.navigationController
-    [self updateGraph];
+          [self updateGraph];
     
 
     
@@ -207,6 +209,7 @@
 
 
 #pragma mark - custom functions
+
 -(void)changeTimeLabel
 {
     
@@ -238,7 +241,7 @@
     LoanProfileData* lpd=[LoanProfileData getInstance];
     
     LoanProfile *lprofile=[[LoanProfile alloc]initCreateLoanProfile_name:self.loanProfileName.text loanAmount:[self.borrowedAmount.text floatValue]payBackTime:[self.totalPaymentPeriod.text intValue] equalPaymentAmount:self.lp.equalPaymentAmount yearlyIntRate: self.interestSlider.value];
-    if ((self.lp.lPId!=0)&&(self.lp!=nil))
+    if ((self.lp.lPId>0)&&(self.lp!=nil))
     {
         int lpid=self.lp.lPId;
         
@@ -263,36 +266,55 @@
 -(void)updateGraph
 {
     
-    [[self.bottomScrollView.subviews objectAtIndex:0] setMainProfile_profileType:@"loan" profile:self.lp];
-    [[self.bottomScrollView.subviews objectAtIndex:0] setNeedsDisplay];
     
-    
-    
-    UniformCashFlowView* thegraph= [self.bottomScrollView.subviews objectAtIndex:0];
-    NSLog(@"graph frame b4:(%f,%f,%f,%f)",thegraph.frame.origin.x,thegraph.frame.origin.y,thegraph.frame.size.width,thegraph.frame.size.height);
-    
-    if ([thegraph needsToStrech] )
+    if ([self.lp everythingIsFilled])
     {
-        [thegraph setFrame:CGRectMake(0, 0, thegraph.frame.size.width+(self.lp.paybackTime*(thegraph.xMargin*2)), 129)];
+        [[self.bottomScrollView.subviews objectAtIndex:0] setMainProfile_profileType:@"loan" profile:self.lp];
+        [[self.bottomScrollView.subviews objectAtIndex:0] setNeedsDisplay];
         
+        
+        
+        UniformCashFlowView* thegraph= [self.bottomScrollView.subviews objectAtIndex:0];
+        UIScrollView* scroll=self.bottomScrollView;
+       
+        double xmargin=scroll.frame.size.width/50;
+        
+        NSLog(@"graph frame b4:(%f,%f,%f,%f)",thegraph.frame.origin.x,thegraph.frame.origin.y,thegraph.frame.size.width,thegraph.frame.size.height);
+        NSLog(@"added by:%f",(self.lp.paybackTime*(xmargin*2)));
+        
+        if ([thegraph needsToStrech] )
+        {
+            [thegraph setFrame:CGRectMake(0, 0, scroll.frame.size.width+(self.lp.paybackTime*(xmargin*2)), 129)];
+            
+        }
+        
+        [self.bottomScrollView setContentSize:thegraph.frame.size];
+        
+        NSLog(@"graph frame after:(%f,%f,%f,%f)",thegraph.frame.origin.x,thegraph.frame.origin.y,thegraph.frame.size.width,thegraph.frame.size.height);
     }
-    
-    [self.bottomScrollView setContentSize:thegraph.frame.size];
-    NSLog(@"graph frame after:(%f,%f,%f,%f)",thegraph.frame.origin.x,thegraph.frame.origin.y,thegraph.frame.size.width,thegraph.frame.size.height);
+  
 
     
 }
 
 
--(BOOL)everythingIsFilled
+-(BOOL)validateTextFieldDecimalVal:(NSString*)amountInput
 {
-    return (self.lp.loanAmount>0)&(self.lp.equalPaymentAmount>0);
+    NSError *error = NULL;
+    NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:@"[a-z]\\w"
+                                                                           options:NSRegularExpressionCaseInsensitive
+                                                                             error:&error];
+    NSUInteger numberOfMatches = [regex numberOfMatchesInString:amountInput
+                                                        options:0
+                                                          range:NSMakeRange(0, [amountInput length])];
+    
+    return numberOfMatches==0;
 }
+
 
 #pragma -mark UITextfield functions
 
-
--(BOOL)textFieldShouldReturn:(UITextField *)textField
+-(void)textFieldDidEndEditing:(UITextField *)textField
 {
     if ([self.loanProfileName.text length]>0)
     {
@@ -300,13 +322,29 @@
         [self changeTimeLabel];
     }
     
- 
+    
     if ([self.borrowedAmount.text length]>0)
     {
-        [self.lp setLoanAmount:[self.borrowedAmount.text doubleValue]];
-         [self changeTimeLabel];
+        
+        if ([self validateTextFieldDecimalVal:self.borrowedAmount.text])
+        {
+            [self.lp setLoanAmount:[self.borrowedAmount.text doubleValue]];
+            [self changeTimeLabel];
+        }
+        else
+        {
+            UIAlertView* alert=[[UIAlertView alloc] initWithTitle:@"validation problem" message:@"validation problem: You Probably Put A Non Decimal Digit In Loan Amount Area " delegate:self cancelButtonTitle:@"ok" otherButtonTitles: nil];
+            [alert show];
+            
+        }
+
+       
     }
-    [self.loanProfileName resignFirstResponder];
+
+}
+-(BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+       [self.loanProfileName resignFirstResponder];
    
 //    [self.totalPaymentPeriod resignFirstResponder];
     [self.borrowedAmount resignFirstResponder];

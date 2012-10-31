@@ -19,6 +19,8 @@
 @implementation ViewAllLoanProfilesController
 @synthesize theLoanProfiles;
 @synthesize onlineMode;
+@synthesize overlayView;
+@synthesize actView;
 - (id)initWithStyle:(UITableViewStyle)style
 {
     self = [super initWithStyle:style];
@@ -32,6 +34,21 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    self.overlayView= [[UIView alloc] initWithFrame:CGRectMake(0, 0, 320, self.tableView.frame.size.height)];
+    [self.overlayView setHidden:YES];
+    self.overlayView.backgroundColor=[UIColor blackColor];
+    
+    [self.view addSubview:self.overlayView];
+
+    //activity indicator view
+    self.actView=[[UIActivityIndicatorView alloc]initWithFrame:CGRectMake(self.view.frame.size.width/2-50, self.view.frame.size.height/2-50, 100, 100)];
+    
+    [self.actView setActivityIndicatorViewStyle:UIActivityIndicatorViewStyleWhiteLarge];
+    
+    [self.overlayView addSubview:self.actView];
+    //////////////////
+    
     
     LoanProfileData* lpd=[LoanProfileData getInstance];
     self.theLoanProfiles= [lpd findAllprofiles];
@@ -50,6 +67,15 @@
 {
    
     [super viewWillAppear:animated];
+    
+    
+    UILabel*loadingOnline=[[UILabel alloc] initWithFrame:CGRectMake(self.view.frame.size.width/2-60,self.actView.center.y-100 , self.view.frame.size.width/2 , self.view.frame.size.width/4)];
+    loadingOnline.text=@"Fetching Info";
+    [loadingOnline setTextColor:[UIColor whiteColor]];
+    [loadingOnline setBackgroundColor:[UIColor clearColor]];
+    [self.overlayView addSubview:loadingOnline];
+    
+    
     if(! self.onlineMode)
     {
     LoanProfileData* lpd=[LoanProfileData getInstance];
@@ -146,10 +172,11 @@
 {
     if (self.tableView.editing == NO)
     {
-        NSMutableArray* too= [[NSMutableArray alloc] init];
-        too[0]= [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:self action:nil];
-      too[1]= [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(showDelete:)];
-        
+       // NSMutableArray* too= [[NSMutableArray alloc] init];
+         NSMutableArray* too=[[ NSMutableArray alloc] initWithArray:  self.toolbarItems];
+//        too[1]= [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:self action:nil];
+     too[2]= [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(showDelete:)];
+        [[self.toolbarItems objectAtIndex:0] setEnabled:NO];
         [self setToolbarItems:too];
         //self.navigationItem.leftBarButtonItem = nil;
         //self.navigationItem.leftBarButtonItem =[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(showDelete:)];
@@ -157,10 +184,9 @@
     }
     else
     {
-        NSMutableArray* too= [[NSMutableArray alloc] init];
-        
-         too[0]= [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:self action:nil];
-        too[1]= [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemTrash target:self action:@selector(showDelete:)];
+         [[self.toolbarItems objectAtIndex:0] setEnabled:YES];
+        NSMutableArray* too= [[ NSMutableArray alloc] initWithArray:  self.toolbarItems];       //  too[0]= [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:self action:nil];
+        too[2]= [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemTrash target:self action:@selector(showDelete:)];
         
         [self setToolbarItems:too];
 
@@ -234,6 +260,8 @@
 {
     if ( !self.onlineMode)
      {
+         [self.overlayView setHidden:NO];
+         [self.actView startAnimating];
         [self findAllprofiles];
          [[self.toolbarItems objectAtIndex:0] setTitle:@"Profiles on Phone"];
 
@@ -245,6 +273,7 @@
           [[self.toolbarItems objectAtIndex:0] setTitle:@"Profiles on Server"];
         self.onlineMode=NO;
         [self.tableView reloadData];
+         [[self.toolbarItems objectAtIndex:2] setEnabled:YES];
         
     }
 
@@ -266,32 +295,47 @@
 
 -(IBAction) dataFetched: (NSData*) response
 {
-    NSError* error;
-    NSArray* jsonData=[NSJSONSerialization JSONObjectWithData:response options:kNilOptions error:&error];
-    
-    if(error)
+    if (response!=nil)
     {
-        NSLog(@"%@", [error localizedDescription]);
+            NSError* error;
+            NSArray* jsonData=[NSJSONSerialization JSONObjectWithData:response options:kNilOptions error:&error];
+            
+            if(error)
+            {
+                NSLog(@"%@", [error localizedDescription]);
+            }
+            
+            
+            NSLog(@"data: %@",jsonData);
+            
+            //////////
+            
+            NSMutableArray* results=[[NSMutableArray alloc] init];
+            NSArray*current=jsonData;//self.theSavingsProfiles;
+            
+            for (int i=0; i<[current count]; i++)
+            {
+                LoanProfile* newOne=[[LoanProfile alloc] initCreateLoanProfile_name:[[current objectAtIndex:i ] valueForKey:@"name"] loanAmount:[[[current objectAtIndex:i ]  valueForKey:@"loanAmount"]  doubleValue]  payBackTime: [[[current objectAtIndex:i ]  valueForKey:@"payBackTime"] intValue] equalPaymentAmount:[[[current objectAtIndex:i ]  valueForKey:@"equalPaymentAmount"] doubleValue]  yearlyIntRate:[[[current objectAtIndex:i ]  valueForKey:@"yearlyIntRate"] doubleValue]];
+                [newOne setCompounding:[[[current objectAtIndex:i] valueForKey:@"compounding"] intValue]];
+                [newOne setPaymentFrequency:[[[current objectAtIndex:i] valueForKey:@"paymentFrequency"] intValue]];
+                [newOne setLPId:-1];
+               [results addObject:newOne];
+            }
+            
+            self.theLoanProfiles=results;
+            [[self.toolbarItems objectAtIndex:2] setEnabled:NO];
+            [self setOnlineMode: YES];
+            [self.tableView reloadData];
     }
-    
-    
-    NSLog(@"data: %@",jsonData);
-    
-    //////////
-    
-    NSMutableArray* results=[[NSMutableArray alloc] init];
-    NSArray*current=jsonData;//self.theSavingsProfiles;
-    
-    for (int i=0; i<[current count]; i++)
+    else
     {
-       [results addObject:[[LoanProfile alloc] initCreateLoanProfile_name:[[current objectAtIndex:i ] valueForKey:@"name"] loanAmount:[[[current objectAtIndex:i ]  valueForKey:@"loanAmount"]  doubleValue]  payBackTime: [[[current objectAtIndex:i ]  valueForKey:@"payBackTime"] intValue] equalPaymentAmount:[[[current objectAtIndex:i ]  valueForKey:@"equalPaymentAmount"] doubleValue]  yearlyIntRate:[[[current objectAtIndex:i ]  valueForKey:@"yearlyIntRate"] doubleValue]]];
+        UIAlertView*alret=[[UIAlertView alloc]initWithTitle:@"Connection Issues" message:@"Wow! We are experiencing server issues. Try again later" delegate:self cancelButtonTitle:@"ok" otherButtonTitles: nil];
+        [alret show];
+        self.onlineMode=NO;
+        [[self.toolbarItems objectAtIndex:2] setEnabled:YES];
     }
-    
-    self.theLoanProfiles=results;
-    [[self.toolbarItems objectAtIndex:2] setEnabled:NO];
-    [self setOnlineMode: YES];
-    [self.tableView reloadData];
-    
+    [self.overlayView setHidden:YES];
+    [self.actView stopAnimating];
     
 }
 

@@ -48,8 +48,8 @@
         
         result++;
          worthAtTime=[self getUniformCashFlowPresentWorth_amount:amount interestRate:interestRate timeInterval:result];
-        NSLog(@"worthAtTime:%f",(worthAtTime));
-        NSLog(@"resentWorth-worthAtTime:%f",(presentWorth-worthAtTime));
+//        NSLog(@"worthAtTime:%f",(worthAtTime));
+//        NSLog(@"resentWorth-worthAtTime:%f",(presentWorth-worthAtTime));
     } while ((presentWorth-worthAtTime)>0);
     
    
@@ -77,8 +77,8 @@
         fworthAtTime=[self getUniformCashFlowFutureValue_amount:amount interestRate:interestRate timeInterval:result];
         
         
-        NSLog(@"worthAtTime:%f",(fworthAtTime));
-        NSLog(@"resentWorth-worthAtTime:%f",(goal-fworthAtTime));
+//        NSLog(@"worthAtTime:%f",(fworthAtTime));
+//        NSLog(@"resentWorth-worthAtTime:%f",(goal-fworthAtTime));
         
         
     } while ((goal-fworthAtTime)>0);
@@ -105,8 +105,8 @@
      
         fworthAtTime= [self getSingleFormCashFlowFuture_presentValue:initial interestRate:interestRate timeInterval:result];
         
-        NSLog(@"worthAtTime %i:%f",(int)result,(fworthAtTime));
-        NSLog(@"goal-worthAtTime:%f",(goal-fworthAtTime));
+//        NSLog(@"worthAtTime %i:%f",(int)result,(fworthAtTime));
+//        NSLog(@"goal-worthAtTime:%f",(goal-fworthAtTime));
         
         
     } while ((goal-fworthAtTime)>0);
@@ -129,8 +129,8 @@
 
 {
     double time=(timeIntervalAtEnd-timeIntervalSoFar)+1;
-    NSLog(@"the principal:%f",[self getUniformCashFlowPresentWorth_amount:amount interestRate:interestRate timeInterval:time]); //get :amount interestRate:interestRate timeInterval:time]);
-    NSLog(@"the interest rate:%f ",interestRate);
+//    NSLog(@"the principal:%f",[self getUniformCashFlowPresentWorth_amount:amount interestRate:interestRate timeInterval:time]); //get :amount interestRate:interestRate timeInterval:time]);
+//    NSLog(@"the interest rate:%f ",interestRate);
     return [self getUniformCashFlowPresentWorth_amount:amount interestRate:interestRate timeInterval:time]*interestRate;
 }
 
@@ -176,7 +176,7 @@
 
 -(double)getUniformCashFlowPresentWorth_amount:(double)amount interestRate:(double)interestRate timeInterval:(double)timeInterval
 {
-    NSLog(@"amount:%f * (p/a):%f | n:%f",amount,[self getUniformCashFlowPresentWorthAmountGiven_interestRate:interestRate timeInterval:timeInterval],timeInterval);
+   // NSLog(@"amount:%f * (p/a):%f | n:%f",amount,[self getUniformCashFlowPresentWorthAmountGiven_interestRate:interestRate timeInterval:timeInterval],timeInterval);
     return amount*[self getUniformCashFlowPresentWorthAmountGiven_interestRate:interestRate timeInterval:timeInterval];
 }
 
