@@ -189,8 +189,12 @@ static LoanProfileData* instance=nil;
     
     NSError * error ;
     NSArray * objects=[ _managedObjectContext executeFetchRequest:request error:&error];
-    
-    return [objects objectAtIndex:0];
+    if ([objects count]>0)
+    {
+         return [objects objectAtIndex:0];
+    }
+    else
+        return nil;
  }
 
 
@@ -292,30 +296,39 @@ static LoanProfileData* instance=nil;
 {
     NSManagedObject* loanProfile= [self findByID:lpID];
     
-    
-    [loanProfile setValue:name forKey:@"name"];
-   // [loanProfile setValue:[NSNumber numberWithInt:([self getMaxID]+1 )] forKey:@"lpid"];
-    [loanProfile setValue:[NSNumber numberWithDouble:yearlyIntRate ]forKey:@"yearlyIntRate"];
-    [loanProfile setValue:[NSNumber numberWithDouble:equalPaymentAmount ] forKey:@"equalPaymentAmount"];
-    [loanProfile setValue:[NSNumber numberWithInt:payBackTime] forKey:@"payBackTime"];
-    
-    [loanProfile setValue:[NSNumber numberWithDouble:loanAmount] forKey:@"loanAmount"];
-  
-    NSError * error;
-    if (![_managedObjectContext save:&error])
+    if (loanProfile!=nil)
     {
-        UIAlertView* alert= [[UIAlertView alloc] initWithTitle:@"save failed" message:[NSString stringWithFormat:@"save to core data failed \n %@",[error localizedDescription]] delegate:nil cancelButtonTitle:@"ok" otherButtonTitles: nil];
-        [alert show];
-        NSLog( @"contact save failed");
+        [loanProfile setValue:name forKey:@"name"];
+        // [loanProfile setValue:[NSNumber numberWithInt:([self getMaxID]+1 )] forKey:@"lpid"];
+        [loanProfile setValue:[NSNumber numberWithDouble:yearlyIntRate ]forKey:@"yearlyIntRate"];
+        [loanProfile setValue:[NSNumber numberWithDouble:equalPaymentAmount ] forKey:@"equalPaymentAmount"];
+        [loanProfile setValue:[NSNumber numberWithInt:payBackTime] forKey:@"payBackTime"];
+        
+        [loanProfile setValue:[NSNumber numberWithDouble:loanAmount] forKey:@"loanAmount"];
+        
+        NSError * error;
+        if (![_managedObjectContext save:&error])
+        {
+            UIAlertView* alert= [[UIAlertView alloc] initWithTitle:@"save failed" message:[NSString stringWithFormat:@"save to core data failed \n %@",[error localizedDescription]] delegate:nil cancelButtonTitle:@"ok" otherButtonTitles: nil];
+            [alert show];
+            NSLog( @"contact save failed");
+        }
+        else
+        {
+            UIAlertView* alert= [[UIAlertView alloc] initWithTitle:@"update succesful" message:[NSString stringWithFormat:@"Woah.Your Update Was succesful! "] delegate:nil cancelButtonTitle:@"ok" otherButtonTitles: nil];
+            [alert show];
+            NSLog( @"contact saved");
+        }
+        
+ 
     }
     else
     {
-        UIAlertView* alert= [[UIAlertView alloc] initWithTitle:@"update succesful" message:[NSString stringWithFormat:@"Woah.Your Update Was succesful! "] delegate:nil cancelButtonTitle:@"ok" otherButtonTitles: nil];
+        UIAlertView* alert= [[UIAlertView alloc] initWithTitle:@"save failed" message:@"save to core data failed " delegate:nil cancelButtonTitle:@"ok" otherButtonTitles: nil];
         [alert show];
-        NSLog( @"contact saved");
-    }
-    
 
+    }
+   
     
 }
 -(void)remeove:(int)lpID
@@ -381,11 +394,18 @@ static LoanProfileData* instance=nil;
 -(LoanProfile *)findByID_id:(int)lpID
 {
     NSManagedObject* current=[self findByID:lpID];
-    LoanProfile*result=
-    [[LoanProfile alloc] initCreateLoanProfile_name:[current valueForKey:@"name"] loanAmount:[[current valueForKey:@"loanAmount"]  doubleValue]  payBackTime: [[current valueForKey:@"payBackTime"] intValue] equalPaymentAmount:[[current valueForKey:@"equalPaymentAmount"] doubleValue]  yearlyIntRate:[[current valueForKey:@"yearlyIntRate"] doubleValue]];
     
-    [result setLPId:lpID];
-    return result;
+    if (current!=nil)
+    {
+        LoanProfile*result=
+        [[LoanProfile alloc] initCreateLoanProfile_name:[current valueForKey:@"name"] loanAmount:[[current valueForKey:@"loanAmount"]  doubleValue]  payBackTime: [[current valueForKey:@"payBackTime"] intValue] equalPaymentAmount:[[current valueForKey:@"equalPaymentAmount"] doubleValue]  yearlyIntRate:[[current valueForKey:@"yearlyIntRate"] doubleValue]];
+        
+        [result setLPId:lpID];
+        return result;
+    }
+    else
+        return nil;
+   
 }
 
 -(void)updateLoanProfile_lp:(LoanProfile *)lp

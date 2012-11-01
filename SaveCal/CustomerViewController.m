@@ -11,6 +11,8 @@
 #import "LoanProfileData.h"
 #import "SavingsProfileData.h"
 #import "CustomerData.h"
+#import "LoanDisplayViewController.h"
+#import "SavingsViewController.h"
 
 @interface CustomerViewController ()
 
@@ -261,21 +263,65 @@
 
 - (IBAction)loadProfile:(id)sender
 {
-//    
-//    if (<#condition#>) {
-//        <#statements#>
-//    }
+     int profileID=[[self.theCustomer objectForKey:@"profileID"] intValue];
+    
+    if (profileID>0)
+    {
+       
+      
+       
+        if ([[self.theCustomer objectForKey:@"loaner"] intValue]==1)
+        {
+            LoanProfileData*lpd= [LoanProfileData getInstance];
+            LoanProfile*associatedProfile=[lpd findByID_id:profileID];
+            if (associatedProfile!=nil)
+            {
+                LoanDisplayViewController*ldvc=[self.storyboard instantiateViewControllerWithIdentifier:@"loanView"];
+                [ldvc setLp:associatedProfile];
+                [self.navigationController pushViewController:ldvc animated:YES];
+                
+            }
+            else
+            {
+                [self showPickerView];
+            }
+        }
+        else
+        {
+            SavingsProfile* associatedProfile=[[SavingsProfileData getInstance] findByID_id:profileID];
+            if (associatedProfile!=nil)
+            {
+                
+                SavingsViewController*svc=[self.storyboard instantiateViewControllerWithIdentifier:@"savingsView"];
+                [svc setSp:associatedProfile];
+                [self.navigationController pushViewController:svc animated:YES];
+            }
+            else
+            {
+                [self showPickerView];
+            }
+        }
+    }
+    else
+    {
     
    
-    NSLog(@"load profile clicked");
-   aac = [[UIActionSheet alloc] initWithTitle:@"pic profile" delegate:self cancelButtonTitle:@"ok" destructiveButtonTitle:nil otherButtonTitles:nil];
+        [self showPickerView];
+        
+    
+    }
+  
+}
+-(void)showPickerView
+{
+    aac = [[UIActionSheet alloc] initWithTitle:@"pic profile" delegate:self cancelButtonTitle:@"ok" destructiveButtonTitle:nil otherButtonTitles:nil];
     
     
     
-   UIPickerView*pickerView=[[UIPickerView alloc]initWithFrame:CGRectMake(0.0, 40.0, 320.0, 100.0)];
+    UIPickerView*pickerView=[[UIPickerView alloc]initWithFrame:CGRectMake(0.0, 40.0, 320.0, 100.0)];
     pickerView.showsSelectionIndicator = YES;
     
-        
+    
     pickerView.dataSource = self;
     pickerView.delegate = self;
     UIToolbar* pickerDateToolbar = [[UIToolbar alloc] initWithFrame:CGRectMake(0, 0, 320, 44)];
@@ -293,23 +339,18 @@
     [pickerDateToolbar setItems:barItems animated:YES];
     
     [aac addSubview:pickerDateToolbar];
-
-    
-    
-    
-    
-    
-    
-    
     [aac addSubview:pickerView];
     [aac showInView:self.tableView];
     [aac setBounds:CGRectMake(0,0,320, 300)];
     
-    
-    
-  
 }
-
+-(IBAction)roleChanged:(id)sender
+{
+    NSLog(@"%@",self.theCustomer);
+    [self.theCustomer setValue:[NSNumber numberWithInteger:self.loaner.selectedSegmentIndex] forKey:@"loaner"];
+    [self.theCustomer setValue:0 forKey:@"profileID"];
+    NSLog(@"%@",self.theCustomer);
+}
 -(void)dismissActionSheet
 {
     [self.aac dismissWithClickedButtonIndex:0 animated:YES];

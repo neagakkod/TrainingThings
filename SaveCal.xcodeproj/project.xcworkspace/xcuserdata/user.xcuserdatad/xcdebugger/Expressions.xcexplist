@@ -3,10 +3,10 @@
    version = "1.0">
    <ContextStates>
       <ContextState
-         contextName = "-[DisplayViewController addPressed:]:DisplayViewController.m">
+         contextName = "-[SavingsAdvancedViewController viewDidLoad]:SavingsAdvancedViewController.m">
          <PersistentStrings>
             <PersistentString
-               value = "self.lp">
+               value = "cSP.compounding">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -88,13 +88,13 @@
          contextName = "-[ViewAllLoanProfilesController prepareForSegue:sender:]:ViewAllLoanProfilesController.m">
          <PersistentStrings>
             <PersistentString
-               value = "segue.identifier">
+               value = "[segue.identifier isEqualToString:edit]">
             </PersistentString>
             <PersistentString
                value = "segue.identifier==edit">
             </PersistentString>
             <PersistentString
-               value = "[segue.identifier isEqualToString:edit]">
+               value = "segue.identifier">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -195,6 +195,22 @@
          contextName = "-[LoanProfileData insertLoanProfile_lp:]:LoanProfileData.m">
       </ContextState>
       <ContextState
+         contextName = "-[CustomerViewController loadProfile:]:CustomerViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "[self.theCustomer objectForKey:@&quot;profileID&quot;]">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[DisplayViewController addPressed:]:DisplayViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.lp">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
          contextName = "-[SavingsProfileData findByID:]:SavingsProfileData.m">
          <PersistentStrings>
             <PersistentString
@@ -207,14 +223,6 @@
          <PersistentStrings>
             <PersistentString
                value = "self.theCustomer">
-            </PersistentString>
-         </PersistentStrings>
-      </ContextState>
-      <ContextState
-         contextName = "-[SavingsAdvancedViewController viewDidLoad]:SavingsAdvancedViewController.m">
-         <PersistentStrings>
-            <PersistentString
-               value = "cSP.compounding">
             </PersistentString>
          </PersistentStrings>
       </ContextState>

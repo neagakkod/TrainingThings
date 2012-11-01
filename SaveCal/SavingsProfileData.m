@@ -180,8 +180,13 @@ static SavingsProfileData* instance=nil;
     
     NSError * error ;
     NSArray * objects=[ _managedObjectContext executeFetchRequest:request error:&error];
+    if ([objects count]>0)
+    {
+        return [objects objectAtIndex:0];
+    }
+    else
+        return nil;
     
-    return [objects objectAtIndex:0];
 }
 
 
@@ -372,10 +377,16 @@ static SavingsProfileData* instance=nil;
 -(SavingsProfile *)findByID_id:(int)lpID
 {
     NSManagedObject* current=[self findByID:lpID];
-    
-   SavingsProfile * element=[[SavingsProfile alloc] initCreateSavingsProfile_name:[current valueForKey:@"name"] startingWith:[[current valueForKey:@"startingWith"]doubleValue]  savingsTime:[[current valueForKey:@"savingsTime"] intValue] equalDepositAmount:[[current valueForKey:@"equalDepositsAmount"] doubleValue] yearlyIntRate:[[current valueForKey:@"yearlyInterestRate"] doubleValue] goal:[[current valueForKey:@"goal"] doubleValue]];
-    [element setSPId:[[current valueForKey:@"spid"] intValue]];
-    return element;
+    if (current!=nil)
+    {
+        SavingsProfile * element=[[SavingsProfile alloc] initCreateSavingsProfile_name:[current valueForKey:@"name"] startingWith:[[current valueForKey:@"startingWith"]doubleValue]  savingsTime:[[current valueForKey:@"savingsTime"] intValue] equalDepositAmount:[[current valueForKey:@"equalDepositsAmount"] doubleValue] yearlyIntRate:[[current valueForKey:@"yearlyInterestRate"] doubleValue] goal:[[current valueForKey:@"goal"] doubleValue]];
+        [element setSPId:[[current valueForKey:@"spid"] intValue]];
+        return element;
+    }
+    else
+        return nil;
+
+   
 }
 
 -(void)updateSavingsProfile_sp:(SavingsProfile *)sp

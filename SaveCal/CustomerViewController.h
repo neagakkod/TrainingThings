@@ -22,6 +22,6 @@
 @property (strong, nonatomic) IBOutlet UITextField *phone;
 
 - (IBAction)addOrSavePressed:(id)sender;
-
+- (IBAction)roleChanged:(id)sender;
 - (IBAction)loadProfile:(id)sender;
 @end
