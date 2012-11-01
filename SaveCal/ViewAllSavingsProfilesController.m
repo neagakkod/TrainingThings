@@ -9,7 +9,8 @@
 #import "ViewAllSavingsProfilesController.h"
 #import "SavingsProfileData.h"
 #import "SavingsViewController.h"
-//#import "SavingsProfileFetcher.h"
+#import "MainViewController.h"
+
 
 #define kBgQueue dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT,0)
 @interface ViewAllSavingsProfilesController ()
@@ -265,6 +266,16 @@
                    });
 
 }
+
+-(IBAction)backToMenu:(id)sender
+{
+    
+    MainViewController*menu=[self.storyboard instantiateViewControllerWithIdentifier:@"mainmenu"];  //[[MainMenuViewController alloc] init];
+    [self presentModalViewController:menu animated:YES];
+    //  [self.navigationController.navigationBar popNavigationItemAnimated:YES];
+    
+}
+
 
 -(IBAction) dataFetched: (NSData*) response
 {

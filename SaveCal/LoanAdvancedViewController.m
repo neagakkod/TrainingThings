@@ -90,6 +90,8 @@
         [self.lp setPaybackTime:[self.lp calculatePayBackTime]];
         self.timeUnitLabels.text= [NSString stringWithFormat:@"%i",self.lp.paybackTime] ;
     }
+  
+
 }
 
 
@@ -165,15 +167,29 @@
 */
 -(BOOL)textFieldShouldReturn:(UITextField *)textField
 {
-    [self.lp setEqualPaymentAmount:[self.eqPaymentAmount.text doubleValue]];
-    
-    [self changeTimeLabel];
-    [self.eqPaymentAmount resignFirstResponder];
+    if ([self validateTextFieldDecimalVal:self.eqPaymentAmount.text])
+    {
+        [self.lp setEqualPaymentAmount:[self.eqPaymentAmount.text doubleValue]];
+        
+        [self changeTimeLabel];
+
+    }
+        [self.eqPaymentAmount resignFirstResponder];
     
     
     return  YES;
 }
-
+-(void)textFieldDidEndEditing:(UITextField *)textField
+{
+    
+     if ([self validateTextFieldDecimalVal:self.eqPaymentAmount.text])
+     {
+         [self.lp setEqualPaymentAmount:[self.eqPaymentAmount.text doubleValue]];
+         
+         [self changeTimeLabel];
+         
+     }
+}
 #pragma mark - Table view delegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
@@ -252,6 +268,21 @@
     }
 
 }
+
+-(BOOL)validateTextFieldDecimalVal:(NSString*)amountInput
+{
+    NSError *error = NULL;
+    NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:@"[a-z]\\w"
+                                                                           options:NSRegularExpressionCaseInsensitive
+                                                                             error:&error];
+    NSUInteger numberOfMatches = [regex numberOfMatchesInString:amountInput
+                                                        options:0
+                                                          range:NSMakeRange(0, [amountInput length])];
+    
+    return numberOfMatches==0;
+}
+
+
 - (void)viewDidUnload {
     [self setTimeUnitLabels:nil];
     [super viewDidUnload];

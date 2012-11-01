@@ -15,4 +15,5 @@
 @property (strong, nonatomic)UIActivityIndicatorView* actView;
 - (IBAction)showOnlineProfiles:(id)sender;
 -(IBAction)showDelete:(id)sender;
+-(IBAction)backToMenu:(id)sender;
 @end

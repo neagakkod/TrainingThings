@@ -7,7 +7,7 @@
 
 
 #import "ViewAllCusotmerCotnroller.h"
-#import "MainMenuViewController.h"
+#import "MainViewController.h"
 #import "CustomerViewController.h"
 #import "CustomerData.h"
 #define kBgQueue dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT,0)
@@ -189,7 +189,7 @@
 -(IBAction)backToMenu:(id)sender
 {
     
-    MainMenuViewController*menu=[self.storyboard instantiateViewControllerWithIdentifier:@"mainmenu"];  //[[MainMenuViewController alloc] init];
+    MainViewController*menu=[self.storyboard instantiateViewControllerWithIdentifier:@"mainmenu"];  //[[MainMenuViewController alloc] init];
     [self presentModalViewController:menu animated:YES];
     //  [self.navigationController.navigationBar popNavigationItemAnimated:YES];
     
@@ -276,6 +276,8 @@
 }
 -(IBAction) dataFetched: (NSData*) response
 {
+     if (response!=nil)
+     {
     NSError* error;
     NSArray* jsonData=[NSJSONSerialization JSONObjectWithData:response options:kNilOptions error:&error];
     
@@ -306,11 +308,20 @@
     }
     
     self.theCustomers=results;
-  
+         [self setOnlineMode: YES];
+         [self.tableView reloadData];
+
+     }
+    else
+    {
+        
+        UIAlertView*alret=[[UIAlertView alloc]initWithTitle:@"Connection Issues" message:@"Wow! We are experiencing server issues. Try again later" delegate:self cancelButtonTitle:@"ok" otherButtonTitles: nil];
+        [alret show];
+        self.onlineMode=NO;
+      //  [[self.toolbarItems objectAtIndex:2] setEnabled:YES];
+    }
     
-    [self setOnlineMode: YES];
-    [self.tableView reloadData];
-    [self.overlayView setHidden:YES];
+          [self.overlayView setHidden:YES];
     [self.actView stopAnimating];
     
 }

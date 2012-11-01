@@ -21,7 +21,7 @@
 
 - (void)saveContext;
 - (NSURL *)applicationDocumentsDirectory;
-
+-(void)setBoundsOnInterest:(UISlider *)slider;
 -(SavingsProfile*)findByID_id:(int)spID;
 -(NSMutableArray*)findAllprofiles;//array of type SavingsProfile
 - (void)insertSavingsProfile_sp:(SavingsProfile*)sp;

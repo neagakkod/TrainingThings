@@ -49,6 +49,8 @@
     }
     else
         spd.currentProfile=cSP;
+    [[SavingsProfileData getInstance] setBoundsOnInterest:self.interestSlider];
+
     
     self.eqDepositAmount.text=[NSString stringWithFormat:@"%.02f",cSP.equalDepositAmount];
     [self.interestSlider setValue:cSP.interestRate];
@@ -149,14 +151,27 @@
 -(BOOL)textFieldShouldReturn:(UITextField *)textField
 {
     
-    
-    [self.sp setEqualDepositAmount:[self.eqDepositAmount.text doubleValue]];
-
-    [self changeTimeLabel];
+   
     [self.eqDepositAmount resignFirstResponder];
     
     
     return YES;
+}
+-(void)textFieldDidEndEditing:(UITextField *)textField
+{
+    if ([self validateTextFieldDecimalVal:self.eqDepositAmount.text])
+    {
+        
+        [self.sp setEqualDepositAmount:[self.eqDepositAmount.text doubleValue]];
+        
+        [self changeTimeLabel];
+    }
+    
+    else
+    {
+        UIAlertView* alert=[[UIAlertView alloc] initWithTitle:@"validation problem" message:@"hmmm. You probably put a non decimal digit in the deposit amount area. " delegate:self cancelButtonTitle:@"ok" otherButtonTitles: nil];
+        [alert show];
+    }
 }
 
 #pragma  mark custom methods
@@ -206,6 +221,18 @@
         [self.sp setSavingsTime:[self.sp calculateSavingsTimeWithEffIntRate]];
         self.totalDepositsNeeded.text=[NSString stringWithFormat:@"%i",self.sp.savingsTime];
     }
+}
+-(BOOL)validateTextFieldDecimalVal:(NSString*)amountInput
+{
+    NSError *error = NULL;
+    NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:@"[a-z]\\w"
+                                                                           options:NSRegularExpressionCaseInsensitive
+                                                                             error:&error];
+    NSUInteger numberOfMatches = [regex numberOfMatchesInString:amountInput
+                                                        options:0
+                                                          range:NSMakeRange(0, [amountInput length])];
+    
+    return numberOfMatches==0;
 }
 
 

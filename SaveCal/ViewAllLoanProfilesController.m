@@ -8,7 +8,7 @@
 
 #import "ViewAllLoanProfilesController.h"
 #import "LoanDisplayViewController.h"
-#import "MainMenuViewController.h"
+#import "MainViewController.h"
 #import "LoanProfileData.h"
 
 #define kBgQueue dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT,0)
@@ -161,7 +161,7 @@
 -(IBAction)backToMenu:(id)sender
 {
     
-    MainMenuViewController*menu=[self.storyboard instantiateViewControllerWithIdentifier:@"mainmenu"];  //[[MainMenuViewController alloc] init];
+    MainViewController*menu=[self.storyboard instantiateViewControllerWithIdentifier:@"mainmenu"];  //[[MainMenuViewController alloc] init];
    [self presentModalViewController:menu animated:YES];
   //  [self.navigationController.navigationBar popNavigationItemAnimated:YES];
     

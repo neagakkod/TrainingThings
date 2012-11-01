@@ -38,7 +38,7 @@
     [super viewDidLoad];
     
     self.yearlyInterest.text=[NSString stringWithFormat:@"%.02f%%",self.interestSlider.value*100 ];
-    [[LoanProfileData getInstance] setBoundsOnInterest:self.interestSlider];
+  //  [[LoanProfileData getInstance] setBoundsOnInterest:self.interestSlider];
     
 
 
@@ -78,7 +78,7 @@
     
    // LoanProfileData* lpd=[LoanProfileData getInstance];
     
-    
+      [[LoanProfileData getInstance] setBoundsOnInterest:self.interestSlider];
     if (!(self.lp==nil))
     {
         [self feedTheComponents];
@@ -259,6 +259,9 @@
         
         
         [lpd insertLoanProfile_lp:lprofile];
+        [lpd setCurrentProdile:lprofile];
+        
+        self.lp=lprofile;
         NSLog(@"total Loan Profiles recorded in device:%i",[[lpd findAllprofiles] count]);
     }
 }

@@ -15,6 +15,11 @@
 		CEA30D29163ECA200008D6EB /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = CEA30D28163ECA200008D6EB /* Settings.bundle */; };
 		CEA30D2D163F40430008D6EB /* loans.png in Resources */ = {isa = PBXBuildFile; fileRef = CEA30D2B163F40430008D6EB /* loans.png */; };
 		CEA30D2E163F40430008D6EB /* savings.png in Resources */ = {isa = PBXBuildFile; fileRef = CEA30D2C163F40430008D6EB /* savings.png */; };
+		CEA4A2C51641AE8300E66D00 /* 12---1.gif in Resources */ = {isa = PBXBuildFile; fileRef = CEA4A2C41641AE8300E66D00 /* 12---1.gif */; };
+		CEA4A2C91641B2F300E66D00 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEA4A2C81641B2F300E66D00 /* MainViewController.m */; };
+		CEA4A2CF1641BE4600E66D00 /* apple-touch-icon-iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = CEA4A2CE1641BE4600E66D00 /* apple-touch-icon-iphone.png */; };
+		CEA4A2D11641BE9A00E66D00 /* apple-touch-icon-iphone4.png in Resources */ = {isa = PBXBuildFile; fileRef = CEA4A2D01641BE9A00E66D00 /* apple-touch-icon-iphone4.png */; };
+		CEA4A2D71641D2B600E66D00 /* Screen Shot 2012-10-31 at 5.41.47 PM.png in Resources */ = {isa = PBXBuildFile; fileRef = CEA4A2D61641D2B600E66D00 /* Screen Shot 2012-10-31 at 5.41.47 PM.png */; };
 		CEBA35FE16333EC400BA8645 /* UniformCashFlowView.m in Sources */ = {isa = PBXBuildFile; fileRef = CEBA35FD16333EC400BA8645 /* UniformCashFlowView.m */; };
 		CEBA36011633553D00BA8645 /* LoanProfile.m in Sources */ = {isa = PBXBuildFile; fileRef = CEBA36001633553D00BA8645 /* LoanProfile.m */; };
 		CEBCBAE01639099A002EAECC /* LoanDisplayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEBCBADF1639099A002EAECC /* LoanDisplayViewController.m */; };
@@ -29,8 +34,6 @@
 		CEDADB5D16165C7E00042942 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CEDADB5B16165C7E00042942 /* InfoPlist.strings */; };
 		CEDADB5F16165C7E00042942 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CEDADB5E16165C7E00042942 /* main.m */; };
 		CEDADB6316165C7E00042942 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CEDADB6216165C7E00042942 /* AppDelegate.m */; };
-		CEDADB6516165C7E00042942 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = CEDADB6416165C7E00042942 /* Default.png */; };
-		CEDADB6716165C7E00042942 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CEDADB6616165C7E00042942 /* Default@2x.png */; };
 		CEDADB6916165C7E00042942 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CEDADB6816165C7E00042942 /* Default-568h@2x.png */; };
 		CEDADB6C16165C7E00042942 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEDADB6A16165C7E00042942 /* MainStoryboard.storyboard */; };
 		CEDADB7E1619D76400042942 /* CashFlowAnalyzer.m in Sources */ = {isa = PBXBuildFile; fileRef = CEDADB7D1619D76400042942 /* CashFlowAnalyzer.m */; };
@@ -38,8 +41,15 @@
 		CEE5707A1634A9150096BE8C /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEE570791634A9150096BE8C /* CoreData.framework */; };
 		CEE5707D1634ABDA0096BE8C /* LoanProfileData.m in Sources */ = {isa = PBXBuildFile; fileRef = CEE5707C1634ABDA0096BE8C /* LoanProfileData.m */; };
 		CEE57084163514A50096BE8C /* ViewAllLoanProfilesController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEE57083163514A50096BE8C /* ViewAllLoanProfilesController.m */; };
-		CEE571061635F2F70096BE8C /* MainMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEE571051635F2F60096BE8C /* MainMenuViewController.m */; };
-		CEFDD7981640A36D00D53DE7 /* apple-touch-icon-iphone4.png in Resources */ = {isa = PBXBuildFile; fileRef = CEFDD7971640A36D00D53DE7 /* apple-touch-icon-iphone4.png */; };
+		CEF2958F1642D06E00A92349 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = CEF2958E1642D06E00A92349 /* Default.png */; };
+		CEF295931642D07F00A92349 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CEF295921642D07F00A92349 /* Default@2x.png */; };
+		CEFDD79F1640E6A400D53DE7 /* 190-bank.png in Resources */ = {isa = PBXBuildFile; fileRef = CEFDD79E1640E6A400D53DE7 /* 190-bank.png */; };
+		CEFDD7A11640E75700D53DE7 /* 161-calculator.png in Resources */ = {isa = PBXBuildFile; fileRef = CEFDD7A01640E75700D53DE7 /* 161-calculator.png */; };
+		CEFDD7A31640E78000D53DE7 /* 119-piggy-bank.png in Resources */ = {isa = PBXBuildFile; fileRef = CEFDD7A21640E78000D53DE7 /* 119-piggy-bank.png */; };
+		CEFDD7A51640E7D800D53DE7 /* 63-runner.png in Resources */ = {isa = PBXBuildFile; fileRef = CEFDD7A41640E7D800D53DE7 /* 63-runner.png */; };
+		CEFDD7A71640E81600D53DE7 /* 112-group.png in Resources */ = {isa = PBXBuildFile; fileRef = CEFDD7A61640E81600D53DE7 /* 112-group.png */; };
+		CEFDD7A91641033C00D53DE7 /* twinpeaks.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = CEFDD7A81641033C00D53DE7 /* twinpeaks.jpeg */; };
+		CEFDD7AB16410E3D00D53DE7 /* twinpeaks.png in Resources */ = {isa = PBXBuildFile; fileRef = CEFDD7AA16410E3D00D53DE7 /* twinpeaks.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +66,12 @@
 		CEA30D28163ECA200008D6EB /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		CEA30D2B163F40430008D6EB /* loans.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = loans.png; sourceTree = "<group>"; };
 		CEA30D2C163F40430008D6EB /* savings.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = savings.png; sourceTree = "<group>"; };
+		CEA4A2C41641AE8300E66D00 /* 12---1.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "12---1.gif"; sourceTree = "<group>"; };
+		CEA4A2C71641B2F300E66D00 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MainViewController.h; path = ../MainViewController.h; sourceTree = "<group>"; };
+		CEA4A2C81641B2F300E66D00 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MainViewController.m; path = ../MainViewController.m; sourceTree = "<group>"; };
+		CEA4A2CE1641BE4600E66D00 /* apple-touch-icon-iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "apple-touch-icon-iphone.png"; sourceTree = "<group>"; };
+		CEA4A2D01641BE9A00E66D00 /* apple-touch-icon-iphone4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "apple-touch-icon-iphone4.png"; sourceTree = "<group>"; };
+		CEA4A2D61641D2B600E66D00 /* Screen Shot 2012-10-31 at 5.41.47 PM.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Screen Shot 2012-10-31 at 5.41.47 PM.png"; sourceTree = "<group>"; };
 		CEBA35FC16333EC400BA8645 /* UniformCashFlowView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UniformCashFlowView.h; sourceTree = "<group>"; };
 		CEBA35FD16333EC400BA8645 /* UniformCashFlowView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UniformCashFlowView.m; sourceTree = "<group>"; };
 		CEBA35FF1633553D00BA8645 /* LoanProfile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoanProfile.h; sourceTree = "<group>"; };
@@ -94,9 +110,16 @@
 		CEE5707C1634ABDA0096BE8C /* LoanProfileData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoanProfileData.m; sourceTree = "<group>"; };
 		CEE57082163514A50096BE8C /* ViewAllLoanProfilesController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewAllLoanProfilesController.h; sourceTree = "<group>"; };
 		CEE57083163514A50096BE8C /* ViewAllLoanProfilesController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewAllLoanProfilesController.m; sourceTree = "<group>"; };
-		CEE571041635F2F60096BE8C /* MainMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainMenuViewController.h; sourceTree = "<group>"; };
-		CEE571051635F2F60096BE8C /* MainMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainMenuViewController.m; sourceTree = "<group>"; };
-		CEFDD7971640A36D00D53DE7 /* apple-touch-icon-iphone4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "apple-touch-icon-iphone4.png"; path = "SaveCal/apple-touch-icon-iphone4.png"; sourceTree = "<group>"; };
+		CEF2958E1642D06E00A92349 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		CEF295901642D07800A92349 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		CEF295921642D07F00A92349 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		CEFDD79E1640E6A400D53DE7 /* 190-bank.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "190-bank.png"; sourceTree = "<group>"; };
+		CEFDD7A01640E75700D53DE7 /* 161-calculator.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "161-calculator.png"; sourceTree = "<group>"; };
+		CEFDD7A21640E78000D53DE7 /* 119-piggy-bank.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "119-piggy-bank.png"; sourceTree = "<group>"; };
+		CEFDD7A41640E7D800D53DE7 /* 63-runner.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "63-runner.png"; sourceTree = "<group>"; };
+		CEFDD7A61640E81600D53DE7 /* 112-group.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "112-group.png"; sourceTree = "<group>"; };
+		CEFDD7A81641033C00D53DE7 /* twinpeaks.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = twinpeaks.jpeg; sourceTree = "<group>"; };
+		CEFDD7AA16410E3D00D53DE7 /* twinpeaks.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = twinpeaks.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,6 +161,13 @@
 		CEA30D2A163F40310008D6EB /* images */ = {
 			isa = PBXGroup;
 			children = (
+				CEFDD7AA16410E3D00D53DE7 /* twinpeaks.png */,
+				CEFDD7A81641033C00D53DE7 /* twinpeaks.jpeg */,
+				CEFDD7A61640E81600D53DE7 /* 112-group.png */,
+				CEFDD7A21640E78000D53DE7 /* 119-piggy-bank.png */,
+				CEFDD7A41640E7D800D53DE7 /* 63-runner.png */,
+				CEFDD7A01640E75700D53DE7 /* 161-calculator.png */,
+				CEFDD79E1640E6A400D53DE7 /* 190-bank.png */,
 				CEA30D2B163F40430008D6EB /* loans.png */,
 				CEA30D2C163F40430008D6EB /* savings.png */,
 			);
@@ -158,7 +188,13 @@
 		CEDADB4316165C7E00042942 = {
 			isa = PBXGroup;
 			children = (
-				CEFDD7971640A36D00D53DE7 /* apple-touch-icon-iphone4.png */,
+				CEF295921642D07F00A92349 /* Default@2x.png */,
+				CEF295901642D07800A92349 /* Default-568h@2x.png */,
+				CEF2958E1642D06E00A92349 /* Default.png */,
+				CEA4A2D01641BE9A00E66D00 /* apple-touch-icon-iphone4.png */,
+				CEA4A2D61641D2B600E66D00 /* Screen Shot 2012-10-31 at 5.41.47 PM.png */,
+				CEA4A2CE1641BE4600E66D00 /* apple-touch-icon-iphone.png */,
+				CEA4A2C41641AE8300E66D00 /* 12---1.gif */,
 				CEDADB5816165C7E00042942 /* SaveCal */,
 				CEDADB5116165C7E00042942 /* Frameworks */,
 				CEDADB4F16165C7E00042942 /* Products */,
@@ -256,9 +292,9 @@
 		CEE570FF1635D7A60096BE8C /* controller */ = {
 			isa = PBXGroup;
 			children = (
+				CEA4A2C71641B2F300E66D00 /* MainViewController.h */,
+				CEA4A2C81641B2F300E66D00 /* MainViewController.m */,
 				CEBCBAFC163A2EE8002EAECC /* Customer */,
-				CEE571041635F2F60096BE8C /* MainMenuViewController.h */,
-				CEE571051635F2F60096BE8C /* MainMenuViewController.m */,
 				CE2AD90C1636513F00E05222 /* savings Controllers */,
 				CEE5710A1635F6FC0096BE8C /* loan Controllers */,
 			);
@@ -330,14 +366,24 @@
 			buildActionMask = 2147483647;
 			files = (
 				CEDADB5D16165C7E00042942 /* InfoPlist.strings in Resources */,
-				CEDADB6516165C7E00042942 /* Default.png in Resources */,
-				CEDADB6716165C7E00042942 /* Default@2x.png in Resources */,
 				CEDADB6916165C7E00042942 /* Default-568h@2x.png in Resources */,
 				CEDADB6C16165C7E00042942 /* MainStoryboard.storyboard in Resources */,
 				CEA30D29163ECA200008D6EB /* Settings.bundle in Resources */,
 				CEA30D2D163F40430008D6EB /* loans.png in Resources */,
 				CEA30D2E163F40430008D6EB /* savings.png in Resources */,
-				CEFDD7981640A36D00D53DE7 /* apple-touch-icon-iphone4.png in Resources */,
+				CEFDD79F1640E6A400D53DE7 /* 190-bank.png in Resources */,
+				CEFDD7A11640E75700D53DE7 /* 161-calculator.png in Resources */,
+				CEFDD7A31640E78000D53DE7 /* 119-piggy-bank.png in Resources */,
+				CEFDD7A51640E7D800D53DE7 /* 63-runner.png in Resources */,
+				CEFDD7A71640E81600D53DE7 /* 112-group.png in Resources */,
+				CEFDD7A91641033C00D53DE7 /* twinpeaks.jpeg in Resources */,
+				CEFDD7AB16410E3D00D53DE7 /* twinpeaks.png in Resources */,
+				CEA4A2C51641AE8300E66D00 /* 12---1.gif in Resources */,
+				CEA4A2CF1641BE4600E66D00 /* apple-touch-icon-iphone.png in Resources */,
+				CEA4A2D11641BE9A00E66D00 /* apple-touch-icon-iphone4.png in Resources */,
+				CEA4A2D71641D2B600E66D00 /* Screen Shot 2012-10-31 at 5.41.47 PM.png in Resources */,
+				CEF2958F1642D06E00A92349 /* Default.png in Resources */,
+				CEF295931642D07F00A92349 /* Default@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -356,7 +402,6 @@
 				CEE570771634A8FD0096BE8C /* Model.xcdatamodeld in Sources */,
 				CEE5707D1634ABDA0096BE8C /* LoanProfileData.m in Sources */,
 				CEE57084163514A50096BE8C /* ViewAllLoanProfilesController.m in Sources */,
-				CEE571061635F2F70096BE8C /* MainMenuViewController.m in Sources */,
 				CE2AD9071636092500E05222 /* SavingsProfileData.m in Sources */,
 				CE2AD90B1636094900E05222 /* SavingsProfile.m in Sources */,
 				CE2AD90F1636518500E05222 /* ViewAllSavingsProfilesController.m in Sources */,
@@ -368,6 +413,7 @@
 				CEBCBAF8163A1CAD002EAECC /* AddressData.m in Sources */,
 				CEBCBAFB163A2EDE002EAECC /* ViewAllCusotmerCotnroller.m in Sources */,
 				CEBCBB02163A34A6002EAECC /* CustomerViewController.m in Sources */,
+				CEA4A2C91641B2F300E66D00 /* MainViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

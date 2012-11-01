@@ -273,9 +273,11 @@ static CustomerData* instance=nil;
     }
     else
     {
+        UIAlertView* alert= [[UIAlertView alloc] initWithTitle:@"Congrats!" message:[NSString stringWithFormat:@"Woah.You Inserted With Success!"] delegate:nil cancelButtonTitle:@"ok" otherButtonTitles: nil];
+        [alert show];
         NSLog( @"customer saved");
     }
-    
+
     
 }
 
@@ -306,9 +308,12 @@ static CustomerData* instance=nil;
     }
     else
     {
+        UIAlertView* alert= [[UIAlertView alloc] initWithTitle:@"update succesful" message:[NSString stringWithFormat:@"Woah.Your Update Was succesful! "] delegate:nil cancelButtonTitle:@"ok" otherButtonTitles: nil];
+        [alert show];
         NSLog( @"customer saved");
     }
     
+
     
     
 }

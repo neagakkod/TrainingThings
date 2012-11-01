@@ -83,6 +83,7 @@
 //    {
 //         self.sp=svpd.currentProfile;
 //    }
+      [[SavingsProfileData getInstance] setBoundsOnInterest:self.interestSlider];
 
     if (self.sp!=nil)
     {
@@ -214,14 +215,34 @@
     
     if ([self.goalAmount.text length]>0)
     {
-       [self.sp setGoal:[self.goalAmount.text doubleValue]];
-        [self changeTimeLabel];
+        if ([self validateTextFieldDecimalVal:self.goalAmount.text])
+        {
+            [self.sp setGoal:[self.goalAmount.text doubleValue]];
+            [self changeTimeLabel];
+        }
+        else
+        {
+            
+            UIAlertView* alert=[[UIAlertView alloc] initWithTitle:@"validation problem" message:@"validation problem: You Probably Put A Non Decimal Digit In Goal Amount Area " delegate:self cancelButtonTitle:@"ok" otherButtonTitles: nil];
+            [alert show];
+        }
     }
        
     if ([self.initialDeposit.text length]>0)
     {
-        [self.sp setStartingWith:[self.initialDeposit.text doubleValue]];
-         [self changeTimeLabel];
+        
+        if ([self validateTextFieldDecimalVal:self.initialDeposit.text ])
+        {
+            
+            [self.sp setStartingWith:[self.initialDeposit.text doubleValue]];
+            [self changeTimeLabel];
+        }
+        else
+        {
+            
+            UIAlertView* alert=[[UIAlertView alloc] initWithTitle:@"validation problem" message:@"validation problem: You Probably Put A Non Decimal Digit In initial deposit Area " delegate:self cancelButtonTitle:@"ok" otherButtonTitles: nil];
+            [alert show];
+        }
     }
 
      
@@ -229,6 +250,54 @@
     [self.goalAmount resignFirstResponder];
     [self.initialDeposit resignFirstResponder];
     return YES;
+}
+-(void)textFieldDidEndEditing:(UITextField *)textField
+{
+    if ([self.goalAmount.text length]>0)
+    {
+        if ([self validateTextFieldDecimalVal:self.goalAmount.text])
+        {
+            [self.sp setGoal:[self.goalAmount.text doubleValue]];
+            [self changeTimeLabel];
+        }
+        else
+        {
+            
+            UIAlertView* alert=[[UIAlertView alloc] initWithTitle:@"validation problem" message:@"validation problem: You Probably Put A Non Decimal Digit In Goal Amount Area " delegate:self cancelButtonTitle:@"ok" otherButtonTitles: nil];
+            [alert show];
+        }
+    }
+    
+    if ([self.initialDeposit.text length]>0)
+    {
+        
+        if ([self validateTextFieldDecimalVal:self.initialDeposit.text ])
+        {
+            
+            [self.sp setStartingWith:[self.initialDeposit.text doubleValue]];
+            [self changeTimeLabel];
+        }
+        else
+        {
+            
+            UIAlertView* alert=[[UIAlertView alloc] initWithTitle:@"validation problem" message:@"validation problem: You Probably Put A Non Decimal Digit In initial deposit Area " delegate:self cancelButtonTitle:@"ok" otherButtonTitles: nil];
+            [alert show];
+        }
+    }
+}
+
+
+-(BOOL)validateTextFieldDecimalVal:(NSString*)amountInput
+{
+    NSError *error = NULL;
+    NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:@"[a-z]\\w"
+                                                                           options:NSRegularExpressionCaseInsensitive
+                                                                             error:&error];
+    NSUInteger numberOfMatches = [regex numberOfMatchesInString:amountInput
+                                                        options:0
+                                                          range:NSMakeRange(0, [amountInput length])];
+    
+    return numberOfMatches==0;
 }
 
 #pragma mark custom methods

@@ -229,9 +229,11 @@ static SavingsProfileData* instance=nil;
     }
     else
     {
+        UIAlertView* alert= [[UIAlertView alloc] initWithTitle:@"Congrats!" message:[NSString stringWithFormat:@"Woah.You Inserted With Success!"] delegate:nil cancelButtonTitle:@"ok" otherButtonTitles: nil];
+        [alert show];
         NSLog( @"profile saved");
     }
-    
+
     
 }
 
@@ -299,8 +301,11 @@ static SavingsProfileData* instance=nil;
     }
     else
     {
-        NSLog( @"profile saved");
+        UIAlertView* alert= [[UIAlertView alloc] initWithTitle:@"update succesful" message:[NSString stringWithFormat:@"Woah.Your Update Was succesful! "] delegate:nil cancelButtonTitle:@"ok" otherButtonTitles: nil];
+        [alert show];
+        NSLog( @"customer saved");
     }
+
     
 }
 -(void)remeove:(int)lpID
@@ -321,6 +326,26 @@ static SavingsProfileData* instance=nil;
    
 }
 #pragma mark public methods
+-(void)setBoundsOnInterest:(UISlider *)slider
+{
+    double maxIntValue=[[[NSUserDefaults standardUserDefaults] stringForKey:@"maxItrVal"] doubleValue];
+    double minIntValue=[[[NSUserDefaults standardUserDefaults] stringForKey:@"minItrVal"] doubleValue];
+    
+    NSLog(@"maxitrval:%f",maxIntValue);
+    NSLog(@"maxitrval:%f",minIntValue);
+    
+    if (maxIntValue>0&&minIntValue>0)
+    {
+        if (minIntValue<maxIntValue)
+        {
+            [slider setMinimumValue:(minIntValue/100)];
+            [slider setMaximumValue:(maxIntValue/100)];
+            
+        }
+    }
+    
+    
+}
 
 -(void)insertSavingsProfile_sp:(SavingsProfile *)sp
 {

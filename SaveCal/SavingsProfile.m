@@ -23,6 +23,17 @@
 @synthesize goal;
 @synthesize name;
 
+-(id)init
+{
+    self= [super init];
+    if (self)
+    {
+        self.depositFrequency=12;//this means 1/month payments
+        self.compounding=1;//this means no compounding
+    }
+    return  self;
+}
+
 -(SavingsProfile*)initCreateSavingsProfile_name:(NSString*)theName startingWith:(double)theStartingWith savingsTime:(int)theSavingsTime equalDepositAmount:(double)theEqualDepositAmount yearlyIntRate:(float)yearlyIntRate goal:(double)theGoal
 {
     
