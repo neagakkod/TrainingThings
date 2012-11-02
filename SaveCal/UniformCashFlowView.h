@@ -23,11 +23,13 @@
 @property (nonatomic) int currentimes;
 @property (nonatomic) double lengthOfMoneyAxis;
 @property (nonatomic) double lengthOfTimeAxis;
+@property (strong,nonatomic) UILabel*toomuch;
 +(int)getDrawingNumber;
 +(double) getInitialXMargin;
 +(double) getInitialYMargin;
 
 -(BOOL)needsToStrech;
+//+ (Class)layerClass;
 -(void)drawEmptyGraph;
 -(void)setMainProfile_profileType:(NSString*)profileType profile:(id)profile;
 -(void)generateGraph_lendingAmount:(double)lendingAmount interestRate:(double)interestRate equalPaymentAmount:(double)equalPaymentAmount timeIntervals:(int)timeIntervals;

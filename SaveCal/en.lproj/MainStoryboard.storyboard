@@ -71,7 +71,7 @@
             </objects>
             <point key="canvasLocation" x="1085" y="1618"/>
         </scene>
-        <!--Savings View Controller-->
+        <!--Savings View Controller - Saving Display-->
         <scene sceneID="dpZ-Gw-58k">
             <objects>
                 <tableViewController storyboardIdentifier="savingsView" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Xqj-Nw-l92" customClass="SavingsViewController" sceneMemberID="viewController">
@@ -239,7 +239,7 @@
                             <outlet property="delegate" destination="Xqj-Nw-l92" id="MaY-ip-sZP"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="DwL-dE-JSm">
+                    <navigationItem key="navigationItem" title="Saving Display" id="DwL-dE-JSm">
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="5Js-MA-GyE">
                             <connections>
                                 <action selector="addOrSavePressed:" destination="Xqj-Nw-l92" id="w5C-4g-Iax"/>
@@ -1309,109 +1309,6 @@
         <image name="12---1.gif" width="320" height="464"/>
         <image name="190-bank.png" width="26" height="22"/>
     </resources>
-    <classes>
-        <class className="CustomerViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/CustomerViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="addOrSavePressed:"/>
-                <relationship kind="action" name="loadProfile:"/>
-                <relationship kind="action" name="roleChanged:"/>
-                <relationship kind="outlet" name="city" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="firstName" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="lastName" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="loaner" candidateClass="UISegmentedControl"/>
-                <relationship kind="outlet" name="phone" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="region" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="streetAddress" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="zipCode" candidateClass="UITextField"/>
-            </relationships>
-        </class>
-        <class className="LoanAdvancedViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/LoanAdvancedViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="compoundingChanged:"/>
-                <relationship kind="action" name="frequencyChanged:"/>
-                <relationship kind="action" name="interestChangded:"/>
-                <relationship kind="outlet" name="eqPaymentAmount" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="interestCompounding" candidateClass="UISegmentedControl"/>
-                <relationship kind="outlet" name="interestLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="interestSlider" candidateClass="UISlider"/>
-                <relationship kind="outlet" name="paymentFrequency" candidateClass="UISegmentedControl"/>
-                <relationship kind="outlet" name="timeUnitLabels" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="LoanDisplayViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/LoanDisplayViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="addPressed:"/>
-                <relationship kind="action" name="sliderValueChanged:"/>
-                <relationship kind="outlet" name="borrowedAmount" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="bottomScrollView" candidateClass="UIScrollView"/>
-                <relationship kind="outlet" name="interestSlider" candidateClass="UISlider"/>
-                <relationship kind="outlet" name="loanProfileName" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="totalPaymentPeriod" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="yearlyInterest" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="MainViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/MainViewController.h"/>
-        </class>
-        <class className="SavingsAdvancedViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/SavingsAdvancedViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="compoundingChanged:"/>
-                <relationship kind="action" name="depositChanged:"/>
-                <relationship kind="action" name="frequencyChanged:"/>
-                <relationship kind="action" name="interestChangded:"/>
-                <relationship kind="outlet" name="depositFrequency" candidateClass="UISegmentedControl"/>
-                <relationship kind="outlet" name="eqDepositAmount" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="interestCompounding" candidateClass="UISegmentedControl"/>
-                <relationship kind="outlet" name="interestLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="interestSlider" candidateClass="UISlider"/>
-                <relationship kind="outlet" name="totalDepositsNeeded" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="SavingsViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/SavingsViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="addOrSavePressed:"/>
-                <relationship kind="action" name="sliderValueChanged:"/>
-                <relationship kind="outlet" name="bottomScrollView" candidateClass="UIScrollView"/>
-                <relationship kind="outlet" name="goalAmount" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="initialDeposit" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="interestSlider" candidateClass="UISlider"/>
-                <relationship kind="outlet" name="savingsProfileName" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="totalSavingsPeriod" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="yearlyInterest" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="UniformCashFlowView" superclassName="UIView">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/UniformCashFlowView.h"/>
-        </class>
-        <class className="ViewAllCusotmerCotnroller" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/ViewAllCusotmerCotnroller.h"/>
-            <relationships>
-                <relationship kind="action" name="backToMenu:"/>
-                <relationship kind="action" name="goOnline:"/>
-            </relationships>
-        </class>
-        <class className="ViewAllLoanProfilesController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/ViewAllLoanProfilesController.h"/>
-            <relationships>
-                <relationship kind="action" name="backToMenu:"/>
-                <relationship kind="action" name="goOnline:"/>
-                <relationship kind="action" name="showDelete:"/>
-            </relationships>
-        </class>
-        <class className="ViewAllSavingsProfilesController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/ViewAllSavingsProfilesController.h"/>
-            <relationships>
-                <relationship kind="action" name="backToMenu:"/>
-                <relationship kind="action" name="showDelete:"/>
-                <relationship kind="action" name="showOnlineProfiles:"/>
-            </relationships>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

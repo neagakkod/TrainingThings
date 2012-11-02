@@ -26,6 +26,7 @@
 @synthesize lprofile;
 @synthesize sprofile;
 @synthesize loan;
+@synthesize toomuch;
 static double initialXMargin=0;
 static double initialYMargin=0;
 static int drawingCount=0;
@@ -58,6 +59,11 @@ static int drawingCount=0;
     }
     return self;
 }
+//
+//    + (Class)layerClass
+//    {
+//        return [CATiledLayer class];
+//    }
 
 
 // Only override drawRect: if you perform custom drawing.
@@ -71,7 +77,7 @@ static int drawingCount=0;
   
    // [self removeLabels];
     [self drawEmptyGraph];
-    if (self.loan==1)
+     if (self.loan==1)
     {
         if (self.lprofile==nil)
         {
@@ -93,6 +99,8 @@ static int drawingCount=0;
     
    
 }
+
+
 
 -(void)setMainProfile_profileType:(NSString *) profileType profile:(id)profile
 {
@@ -138,7 +146,6 @@ static int drawingCount=0;
 }
 -(void)drawEmptyGraph
 {
-      
     
     self.xMargin=self.frame.size.width/50;
     self.yMargin=self.frame.size.height/50;
@@ -352,7 +359,7 @@ static int drawingCount=0;
         
         number.font= [UIFont systemFontOfSize:8];
         number.backgroundColor=[UIColor clearColor];
-        number.textColor=[UIColor redColor ];
+        number.textColor=[UIColor blueColor ];
     
         [self addSubview:number];
         

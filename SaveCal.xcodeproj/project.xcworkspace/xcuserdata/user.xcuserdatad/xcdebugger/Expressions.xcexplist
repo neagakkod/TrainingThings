@@ -11,188 +11,10 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "-[LoanDisplayViewController updateGraph]:LoanDisplayViewController.m">
-         <PersistentStrings>
-            <PersistentString
-               value = "[self.lp everythingIsFilled]">
-            </PersistentString>
-         </PersistentStrings>
-      </ContextState>
-      <ContextState
-         contextName = "-[ViewAllSavingsProfilesController prepareForSegue:sender:]:ViewAllSavingsProfilesController.m">
-         <PersistentStrings>
-            <PersistentString
-               value = "detailViewController.sp.name">
-            </PersistentString>
-         </PersistentStrings>
-      </ContextState>
-      <ContextState
-         contextName = "-[CashFlowAnalyzer getTimeIntervalsNeeded_futureWorth:interestRate:initial:]:CashFlowAnalyzer.m">
-         <PersistentStrings>
-            <PersistentString
-               value = "goal">
-            </PersistentString>
-         </PersistentStrings>
-      </ContextState>
-      <ContextState
-         contextName = "-[AddressData insertAddress_city:country:customerID:region:streetAddress:zipcode:]:AddressData.m">
-         <PersistentStrings>
-            <PersistentString
-               value = "[ NSNumber numberWithInt:customerID]">
-            </PersistentString>
-         </PersistentStrings>
-      </ContextState>
-      <ContextState
          contextName = "-[LoanDisplayViewController viewDidAppear:]:LoanDisplayViewController.m">
       </ContextState>
       <ContextState
-         contextName = "-[UniformCashFlowView drawRect:]:UniformCashFlowView.m">
-         <PersistentStrings>
-            <PersistentString
-               value = "self.sprofile.interestRate">
-            </PersistentString>
-         </PersistentStrings>
-      </ContextState>
-      <ContextState
          contextName = "-[LoanDisplayViewController feedTheComponents]:LoanDisplayViewController.m">
-      </ContextState>
-      <ContextState
-         contextName = "-[LoanAdvancedViewController compoundingChanged:]:LoanAdvancedViewController.m">
-      </ContextState>
-      <ContextState
-         contextName = "-[ViewAllLoanProfilesController dataFetched:]:ViewAllLoanProfilesController.m">
-         <PersistentStrings>
-            <PersistentString
-               value = "[current valueForKey:@&quot;name&quot;] ">
-            </PersistentString>
-            <PersistentString
-               value = "[current valueForKey:@&quot;loanAmount&quot;] ">
-            </PersistentString>
-         </PersistentStrings>
-      </ContextState>
-      <ContextState
-         contextName = "-[UniformCashFlowView generateGraph_initialDeposit:interestRate:timeIntervals:goal:equalDepositAmount:]:UniformCashFlowView.m">
-         <PersistentStrings>
-            <PersistentString
-               value = "timeIntervals">
-            </PersistentString>
-         </PersistentStrings>
-      </ContextState>
-      <ContextState
-         contextName = "-[LoanDisplayViewController addPressed:]:LoanDisplayViewController.m">
-      </ContextState>
-      <ContextState
-         contextName = "-[SavingsViewController addOrSavePressed:]:SavingsViewController.m">
-      </ContextState>
-      <ContextState
-         contextName = "-[ViewAllLoanProfilesController prepareForSegue:sender:]:ViewAllLoanProfilesController.m">
-         <PersistentStrings>
-            <PersistentString
-               value = "[segue.identifier isEqualToString:edit]">
-            </PersistentString>
-            <PersistentString
-               value = "segue.identifier==edit">
-            </PersistentString>
-            <PersistentString
-               value = "segue.identifier">
-            </PersistentString>
-         </PersistentStrings>
-      </ContextState>
-      <ContextState
-         contextName = "-[LoanDisplayViewController viewDidLoad]:LoanDisplayViewController.m">
-      </ContextState>
-      <ContextState
-         contextName = "-[CustomerData findCustomers]:CustomerData.m">
-         <PersistentStrings>
-            <PersistentString
-               value = "[current valueForKey:@&quot;profileID&quot;]">
-            </PersistentString>
-            <PersistentString
-               value = "[kindOfRawData count]">
-            </PersistentString>
-         </PersistentStrings>
-      </ContextState>
-      <ContextState
-         contextName = "-[CustomerData insertCustomer_firstName:lastName:loaner:phone:profileID:]:CustomerData.m">
-         <PersistentStrings>
-            <PersistentString
-               value = "[NSNumber numberWithInt:[self maxID]] ">
-            </PersistentString>
-         </PersistentStrings>
-      </ContextState>
-      <ContextState
-         contextName = "-[MainMenuViewController prepareForSegue:sender:]:MainMenuViewController.m">
-         <PersistentStrings>
-            <PersistentString
-               value = "segue.identifier">
-            </PersistentString>
-         </PersistentStrings>
-      </ContextState>
-      <ContextState
-         contextName = "-[SavingsViewController viewDidAppear:]:SavingsViewController.m">
-         <PersistentStrings>
-            <PersistentString
-               value = "svpd.currentProfile">
-            </PersistentString>
-         </PersistentStrings>
-      </ContextState>
-      <ContextState
-         contextName = "-[LoanProfile calculatePayBackTimeWithEffIntRate]:LoanProfile.m">
-         <PersistentStrings>
-            <PersistentString
-               value = "[self calculateEffectiveInterestRate]">
-            </PersistentString>
-         </PersistentStrings>
-      </ContextState>
-      <ContextState
-         contextName = "-[TestView drawRect:]:TestView.m">
-         <PersistentStrings>
-            <PersistentString
-               value = "rect">
-            </PersistentString>
-         </PersistentStrings>
-      </ContextState>
-      <ContextState
-         contextName = "-[LoanAdvancedViewController interestChangded:]:LoanAdvancedViewController.m">
-      </ContextState>
-      <ContextState
-         contextName = "-[LoanProfile everythingIsFilled]:LoanProfile.m">
-         <PersistentStrings>
-            <PersistentString
-               value = "(self.loanAmount&gt;0)">
-            </PersistentString>
-            <PersistentString
-               value = "(self.equalPaymentAmount&gt;0)">
-            </PersistentString>
-            <PersistentString
-               value = "[self everythingIsFilled]">
-            </PersistentString>
-         </PersistentStrings>
-      </ContextState>
-      <ContextState
-         contextName = "-[LoanAdvancedViewController viewDidLoad]:LoanAdvancedViewController.m">
-         <PersistentStrings>
-            <PersistentString
-               value = "[self everythingIsFilled]">
-            </PersistentString>
-         </PersistentStrings>
-      </ContextState>
-      <ContextState
-         contextName = "-[LoanProfileData findAllprofiles]:LoanProfileData.m">
-      </ContextState>
-      <ContextState
-         contextName = "-[SavingsProfileData remeove:]:SavingsProfileData.m">
-         <PersistentStrings>
-            <PersistentString
-               value = "[self findByID:lpID]">
-            </PersistentString>
-         </PersistentStrings>
-      </ContextState>
-      <ContextState
-         contextName = "-[LoanDisplayViewController textFieldShouldReturn:]:LoanDisplayViewController.m">
-      </ContextState>
-      <ContextState
-         contextName = "-[LoanProfileData insertLoanProfile_lp:]:LoanProfileData.m">
       </ContextState>
       <ContextState
          contextName = "-[CustomerViewController loadProfile:]:CustomerViewController.m">
@@ -219,10 +41,196 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
+         contextName = "-[CashFlowAnalyzer getTimeIntervalsNeeded_futureWorth:interestRate:initial:]:CashFlowAnalyzer.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "goal">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[LoanProfileData findAllprofiles]:LoanProfileData.m">
+      </ContextState>
+      <ContextState
+         contextName = "-[MainMenuViewController prepareForSegue:sender:]:MainMenuViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "segue.identifier">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[SavingsProfileData remeove:]:SavingsProfileData.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "[self findByID:lpID]">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[LoanProfile everythingIsFilled]:LoanProfile.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "(self.loanAmount&gt;0)">
+            </PersistentString>
+            <PersistentString
+               value = "(self.equalPaymentAmount&gt;0)">
+            </PersistentString>
+            <PersistentString
+               value = "[self everythingIsFilled]">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[LoanAdvancedViewController compoundingChanged:]:LoanAdvancedViewController.m">
+      </ContextState>
+      <ContextState
+         contextName = "-[CustomerData insertCustomer_firstName:lastName:loaner:phone:profileID:]:CustomerData.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "[NSNumber numberWithInt:[self maxID]] ">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[LoanAdvancedViewController interestChangded:]:LoanAdvancedViewController.m">
+      </ContextState>
+      <ContextState
+         contextName = "-[LoanAdvancedViewController viewDidLoad]:LoanAdvancedViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "[self everythingIsFilled]">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[AddressData insertAddress_city:country:customerID:region:streetAddress:zipcode:]:AddressData.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "[ NSNumber numberWithInt:customerID]">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[TestView drawRect:]:TestView.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "rect">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[CustomerData findCustomers]:CustomerData.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "[current valueForKey:@&quot;profileID&quot;]">
+            </PersistentString>
+            <PersistentString
+               value = "[kindOfRawData count]">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[LoanProfileData insertLoanProfile_lp:]:LoanProfileData.m">
+      </ContextState>
+      <ContextState
+         contextName = "-[UniformCashFlowView generateGraph_initialDeposit:interestRate:timeIntervals:goal:equalDepositAmount:]:UniformCashFlowView.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "timeIntervals">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[LoanDisplayViewController addPressed:]:LoanDisplayViewController.m">
+      </ContextState>
+      <ContextState
+         contextName = "-[SavingsViewController viewDidAppear:]:SavingsViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "svpd.currentProfile">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[ViewAllLoanProfilesController prepareForSegue:sender:]:ViewAllLoanProfilesController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "[segue.identifier isEqualToString:edit]">
+            </PersistentString>
+            <PersistentString
+               value = "segue.identifier==edit">
+            </PersistentString>
+            <PersistentString
+               value = "segue.identifier">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[LoanDisplayViewController textFieldShouldReturn:]:LoanDisplayViewController.m">
+      </ContextState>
+      <ContextState
+         contextName = "-[LoanDisplayViewController updateGraph]:LoanDisplayViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "[self.lp everythingIsFilled]">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[ViewAllSavingsProfilesController prepareForSegue:sender:]:ViewAllSavingsProfilesController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "detailViewController.sp.name">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[LoanAdvancedViewController changeTimeLabel]:LoanAdvancedViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "[self.lp calculatePayBackTime]">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[SavingsViewController addOrSavePressed:]:SavingsViewController.m">
+      </ContextState>
+      <ContextState
+         contextName = "-[ViewAllLoanProfilesController dataFetched:]:ViewAllLoanProfilesController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "[current valueForKey:@&quot;name&quot;] ">
+            </PersistentString>
+            <PersistentString
+               value = "[current valueForKey:@&quot;loanAmount&quot;] ">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
          contextName = "-[CustomerViewController feedTheUIOutlets]:CustomerViewController.m">
          <PersistentStrings>
             <PersistentString
                value = "self.theCustomer">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[LoanProfile calculatePayBackTimeWithEffIntRate]:LoanProfile.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "[self calculateEffectiveInterestRate]">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[LoanDisplayViewController viewDidLoad]:LoanDisplayViewController.m">
+      </ContextState>
+      <ContextState
+         contextName = "-[UniformCashFlowView drawRect:]:UniformCashFlowView.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.sprofile.interestRate">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
